@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-padding-top: 80px;
+    overscroll-behavior-y: none;
+    @apply bg-bg-primary;
+  }
+  body {
+    @apply bg-bg-primary text-text-main antialiased font-sans tracking-tight-tech;
+  }
+  
+  /* Forzar aceleración por hardware (GPU) solo en medios pesados para no saturar la memoria y perder FPS */
+  img, video, iframe {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
+
+/* Lenis Recommended CSS para evitar tearing y lag */
+html.lenis, html.lenis body {
+  height: auto;
+  width: 100%;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@layer components {
+  /* Botones redondeados */
+  .btn-primary {
+    background: linear-gradient(to bottom right, #1E3A8A, rgba(27, 156, 255, 0.8), #0B0D12);
+    background-size: 200% 200%;
+    @apply inline-flex items-center justify-center gap-2 font-sans font-bold text-[14px] text-white py-3 px-8 rounded-full transition-all duration-300 ease-in-out active:scale-98;
+  }
+  .btn-primary:hover {
+    background-position: right bottom;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 font-sans font-bold text-[14px] bg-transparent text-text-main border-2 border-border-hard py-3 px-8 rounded-full transition-transform duration-100 ease-in-out active:scale-98 hover:bg-bg-secondary;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    @apply opacity-0 transition-opacity duration-[800ms] ease-out;
+  }
+  .reveal.active {
+    @apply opacity-100;
+  }
+  .bg-brand-gradient {
+    background: linear-gradient(to bottom right, #1E3A8A, rgba(27, 156, 255, 0.8));
+  }
+  .border-brand-gradient {
+    background: linear-gradient(to bottom right, #1E3A8A, rgba(27, 156, 255, 0.8), #0B0D12);
+  }
+  .pm-fade-in {
+    animation: 500ms pmFadeIn;
+  }
+}
+
+@keyframes pmFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
