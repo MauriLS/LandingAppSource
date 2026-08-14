@@ -38,10 +38,10 @@
   </style>
 </head>
 
-<body class="text-text-main font-sans antialiased selection:bg-[#0EA5E9] selection:text-slate-900 bg-bg-primary">
+<body class="text-slate-900 font-sans antialiased selection:bg-[#0EA5E9] selection:text-slate-900 bg-[#ffffff]">
 
   <!-- Navegación -->
-  <nav class="sticky top-0 z-50 border-b border-border-hard bg-bg-primary">
+  <nav class="sticky top-0 z-50 border-b border-slate-200 bg-[#ffffff]">
     <div class="max-w-[1200px] mx-auto px-6 flex items-center justify-between py-4">
       <div class="flex items-center gap-3">
         <button id="mobileMenuBtn" aria-label="Abrir menú" class="md:hidden text-black hover:text-[#0EA5E9] focus:outline-none mr-2 transition-colors">
@@ -51,7 +51,7 @@
         </button>
         <!-- Reemplaza logo.png con tu archivo en public/img -->
         <img src="img/logo.png" alt="MauricioLillo.cl" class="h-6 w-auto object-contain">
-        <a href="#top" class="font-sans font-bold tracking-widest text-[14px] text-text-main no-underline hidden lg:block">APPSOURCE</a>
+        <a href="#top" class="font-sans font-bold tracking-widest text-[14px] text-slate-900 no-underline hidden lg:block">APPSOURCE</a>
       </div>
 
       <div class="hidden md:flex items-center gap-6 font-sans font-semibold text-[13px] uppercase text-black">
@@ -70,7 +70,7 @@
     <!-- Menú Móvil Overlay -->
     <div id="mobileMenuOverlay" class="fixed inset-0 bg-white/50 z-[90] hidden md:hidden transition-opacity duration-300 opacity-0"></div>
 
-    <div id="mobileMenu" class="fixed top-0 left-0 bottom-0 w-1/2 bg-bg-primary shadow-2xl z-[100] transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-6 gap-6 font-sans font-semibold text-[16px] uppercase text-black border-r border-border-hard">
+    <div id="mobileMenu" class="fixed top-0 left-0 bottom-0 w-1/2 bg-[#ffffff] shadow-2xl z-[100] transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-6 gap-6 font-sans font-semibold text-[16px] uppercase text-black border-r border-slate-200">
       <button id="closeMobileMenuBtn" aria-label="Cerrar menú" class="absolute top-6 right-6 text-black hover:text-[#0EA5E9] focus:outline-none transition-colors">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -88,13 +88,13 @@
   <header class="py-16 md:py-24 bg-[#ffffff] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNlNWU3ZWIiLz48L3N2Zz4=')] bg-repeat" id="top">
     <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-16 items-center">
       <!-- Izquierda: Copy -->
-      <div class="z-10 bg-bg-primary p-2">
-        <h1 class="font-sans font-black leading-[1.05] text-5xl md:text-6xl tracking-tight-tech text-text-main uppercase">
+      <div class="z-10 bg-[#ffffff] p-2">
+        <h1 class="font-sans font-black leading-[1.05] text-5xl md:text-6xl tracking-tight-tech text-slate-900 uppercase">
           Controla toda operacion de tu negocio<br>
-          <span class="text-text-muted">en un solo sistema</span>
+          <span class="text-slate-600">en un solo sistema</span>
         </h1>
 
-        <p class="text-text-muted text-xl md:text-2xl mt-6 max-w-[45ch]">
+        <p class="text-slate-600 text-xl md:text-2xl mt-6 max-w-[45ch]">
           Gestiona tu empresa desde la tranquilidad de tener todo centralizado y automatizado.
         </p>
 
@@ -112,12 +112,12 @@
             <!-- Top Bar -->
             <div class="border-b border-blue-900/30 px-4 py-3 flex items-center justify-between bg-white/60 backdrop-blur-sm">
               <div class="flex gap-2">
-                <div class="w-3 h-3 border border-border-hard bg-white"></div>
-                <div class="w-3 h-3 border border-border-hard bg-white"></div>
-                <div class="w-3 h-3 border border-border-hard bg-white"></div>
+                <div class="w-3 h-3 border border-slate-200 bg-white"></div>
+                <div class="w-3 h-3 border border-slate-200 bg-white"></div>
+                <div class="w-3 h-3 border border-slate-200 bg-white"></div>
               </div>
-              <div class="font-mono text-[11px] text-text-muted">ID: PANEL_CONTROL_001</div>
-              <div class="w-4 h-4 rounded-full border border-border-hard bg-[#0EA5E9]"></div>
+              <div class="font-mono text-[11px] text-slate-600">ID: PANEL_CONTROL_001</div>
+              <div class="w-4 h-4 rounded-full border border-slate-200 bg-[#0EA5E9]"></div>
             </div>
             <!-- Video Container -->
             <div class="relative w-full aspect-video bg-border-hard overflow-hidden">
@@ -217,7 +217,7 @@
           </div>
 
           <!-- Image Container -->
-          <div class="relative w-full h-full min-h-[400px] border border-border-hard rounded-2xl overflow-hidden bg-white p-8 flex flex-col justify-end group reveal">
+          <div class="relative w-full h-full min-h-[400px] border border-slate-200 rounded-2xl overflow-hidden bg-white p-8 flex flex-col justify-end group reveal">
             <!-- Imagen real que puedes cambiar -->
             <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&amp;fit=crop&amp;q=80&amp;w=1000" alt="Sala de espera vacía" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700 z-0">
 
@@ -433,7 +433,7 @@
               GARANTIZADO
             </p>
           </div>
-          <div class="hidden md:block font-mono text-[11px] uppercase bg-bg-primary border border-border-hard px-3 py-1 text-text-main rounded-full">
+          <div class="hidden md:block font-mono text-[11px] uppercase bg-[#ffffff] border border-slate-200 px-3 py-1 text-slate-900 rounded-full">
             MÉTODO ESTRUCTURADO
           </div>
         </div>
@@ -712,7 +712,7 @@
       <div class="max-w-[800px] mx-auto px-6">
         <div class="mb-12">
           <h2 class="font-sans font-black text-3xl tracking-tight-tech uppercase">Base de Conocimiento</h2>
-          <p class="font-mono text-[15px] md:text-[16px] text-text-muted mt-2">PREGUNTAS FRECUENTES (FAQ)</p>
+          <p class="font-mono text-[15px] md:text-[16px] text-slate-600 mt-2">PREGUNTAS FRECUENTES (FAQ)</p>
         </div>
 
         <div class="border-t border-[#0ea5e9]">

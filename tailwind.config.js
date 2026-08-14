@@ -12,10 +12,10 @@ export default {
         'bg-secondary': '#F3F4F6',
         
         /* Typography & Borders (Monochrome) */
-        'text-main': '#ffffff',
+        'text-main': '#0f172a',
         'text-muted': '#4B5563',
         'border-soft': '#E5E7EB',
-        'border-hard': '#ffffff',
+        'border-hard': '#cbd5e1',
         
         /* Technical Accents */
         'accent': '#0EA5E9', /* Bright Blue */
