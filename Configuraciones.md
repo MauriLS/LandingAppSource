@@ -1,4 +1,4 @@
-# Configuraciones de la Landing Page (MauricioLillo.cl)
+# Configuraciones de la Landing Page 
 
 Este documento guarda los parámetros y decisiones técnicas clave aplicados a la landing page para optimización y consistencia visual.
 

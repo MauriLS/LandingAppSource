@@ -65,33 +65,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   
   if (timelineSteps.length > 0) {
     const defaultClasses = {
-      card: ['border-gray-800', 'group-hover:border-gray-600'],
-      indicator: ['bg-gray-800', 'text-gray-400', 'border-[#0B0D12]'],
-      title: ['text-white'],
-      stepText: ['text-gray-500'],
-      icon: ['text-gray-600'],
-      footer: ['bg-gray-900/50', 'border-gray-800'],
-      footerText: ['text-gray-500']
+      card: ['border-sky-200', 'group-hover:border-gray-600'],
+      indicator: ['bg-slate-700', 'text-slate-600', 'border-[#f0f9ff]'],
+      title: ['text-slate-900'],
+      stepText: ['text-slate-500'],
+      icon: ['text-slate-600'],
+      footer: ['bg-slate-50', 'border-sky-100'],
+      footerText: ['text-slate-500']
     };
 
     const activeClasses = {
-      card: ['border-[#1B9CFF]/50', 'group-hover:border-[#1B9CFF]/80', 'group-hover:shadow-[0_0_25px_rgba(27,156,255,0.15)]'],
-      indicator: ['bg-[#1B9CFF]', 'text-white', 'shadow-[0_0_15px_rgba(27,156,255,0.4)]', 'border-[#0B0D12]'],
-      title: ['text-[#1B9CFF]'],
-      stepText: ['text-[#1B9CFF]'],
-      icon: ['text-[#1B9CFF]'],
-      footer: ['bg-[#1B9CFF]/10', 'border-[#1B9CFF]/30'],
-      footerText: ['text-gray-300']
+      card: ['border-[#0EA5E9]/50', 'group-hover:border-[#0EA5E9]/80', 'group-hover:shadow-[0_0_25px_rgba(14,165,233,0.15)]'],
+      indicator: ['bg-[#0EA5E9]', 'text-slate-900', 'shadow-[0_0_15px_rgba(14,165,233,0.4)]', 'border-[#f0f9ff]'],
+      title: ['text-[#0EA5E9]'],
+      stepText: ['text-[#0EA5E9]'],
+      icon: ['text-[#0EA5E9]'],
+      footer: ['bg-[#0EA5E9]/10', 'border-[#0EA5E9]/30'],
+      footerText: ['text-slate-600']
     };
 
     const completedClasses = {
-      card: ['border-[#1B9CFF]/30', 'group-hover:border-[#1B9CFF]/50'],
-      indicator: ['bg-transparent', 'text-[#1B9CFF]', 'border-[#1B9CFF]'],
-      title: ['text-white'],
-      stepText: ['text-gray-400'],
-      icon: ['text-[#1B9CFF]'],
-      footer: ['bg-gray-900/50', 'border-gray-800'],
-      footerText: ['text-gray-400']
+      card: ['border-[#0EA5E9]/30', 'group-hover:border-[#0EA5E9]/50'],
+      indicator: ['bg-transparent', 'text-[#0EA5E9]', 'border-[#0EA5E9]'],
+      title: ['text-slate-900'],
+      stepText: ['text-slate-600'],
+      icon: ['text-[#0EA5E9]'],
+      footer: ['bg-slate-50', 'border-sky-100'],
+      footerText: ['text-slate-600']
     };
     
     timelineSteps.forEach((step, index) => {
@@ -110,7 +110,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
            const items = statusContainer.querySelectorAll('.status-item');
            items.forEach((item, i) => {
              if (i < stepNum) {
-               item.className = 'status-item text-[#1B9CFF] font-bold transition-all';
+               item.className = 'status-item text-[#0EA5E9] font-bold transition-all';
              } else {
                item.className = 'status-item opacity-50 transition-all';
              }

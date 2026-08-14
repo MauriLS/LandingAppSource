@@ -4,18 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-primary: #ffffff;
+}
+
 @layer base {
   html {
     scroll-padding-top: 80px;
-    overscroll-behavior-y: none;
-    @apply bg-bg-primary;
+    overscroll-behavior-y: none; /* Previene el "rebote" nativo y ahorra cálculos */
+    background-color: var(--bg-primary); /* Previene destellos blancos */
   }
   body {
     @apply bg-bg-primary text-text-main antialiased font-sans tracking-tight-tech;
   }
   
   /* Forzar aceleración por hardware (GPU) solo en medios pesados para no saturar la memoria y perder FPS */
-  img, video, iframe {
+  img:not(.reveal img):not(.reveal video):not(.reveal iframe), video:not(.reveal video), iframe:not(.reveal iframe) {
     transform: translateZ(0);
     backface-visibility: hidden;
   }
@@ -42,7 +46,7 @@ html.lenis, html.lenis body {
 @layer components {
   /* Botones redondeados */
   .btn-primary {
-    background: linear-gradient(to bottom right, #1E3A8A, rgba(27, 156, 255, 0.8), #0B0D12);
+    background: linear-gradient(to bottom right, #0284C7, rgba(14, 165, 233, 0.8), #f0f9ff);
     background-size: 200% 200%;
     @apply inline-flex items-center justify-center gap-2 font-sans font-bold text-[14px] text-white py-3 px-8 rounded-full transition-all duration-300 ease-in-out active:scale-98;
   }
@@ -62,10 +66,10 @@ html.lenis, html.lenis body {
     @apply opacity-100;
   }
   .bg-brand-gradient {
-    background: linear-gradient(to bottom right, #1E3A8A, rgba(27, 156, 255, 0.8));
+    background: linear-gradient(to bottom right, #0284C7, rgba(14, 165, 233, 0.8));
   }
   .border-brand-gradient {
-    background: linear-gradient(to bottom right, #1E3A8A, rgba(27, 156, 255, 0.8), #0B0D12);
+    background: linear-gradient(to bottom right, #0284C7, rgba(14, 165, 233, 0.8), #f0f9ff);
   }
   .pm-fade-in {
     animation: 500ms pmFadeIn;
