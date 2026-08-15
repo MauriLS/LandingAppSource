@@ -1,792 +1,243 @@
-<!DOCTYPE html><html lang="es-CL"><head>
+<!DOCTYPE html><html lang="es-CL">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Appsource — Controla tu operación, facturación y cobranza en un solo sistema.</title>
-  <meta name="description" content="ERP robusto y estable para ISPs y PYMEs en Chile. Automatización, facturación SII y soporte técnico local. 13 años de experiencia.">
+  <title>Deja de perder equipos y clientes por gestión manual | APPsource</title>
+  <meta name="description" content="Software de gestión ERP para ISP en Chile. Alternativa a MicroWISP y SmartOLT con facturación electrónica SII, control de inventario y soporte técnico local.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    /* Detalles sin marcador de flecha en webkit para la sección FAQ */
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: '+';
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.1rem;
-      color: theme('colors.text-main');
-    }
-
-    details[open] summary::after {
-      content: '–';
-    }
-
-    /* Utility for brutalist cards to expand on hover */
-    .feature-card .reveal-content {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .feature-card:hover .reveal-content {
-      max-height: 150px;
-      opacity: 1;
-      margin-top: 1rem;
-    }
-  </style>
 </head>
-
-<body class="text-slate-900 font-sans antialiased selection:bg-[#0EA5E9] selection:text-slate-900 bg-[#ffffff]">
-
+<body class="text-slate-900 font-sans antialiased selection:bg-accent selection:text-white bg-bg-primary">
   <!-- Navegación -->
-  <nav class="sticky top-0 z-50 border-b border-slate-200 bg-[#ffffff]">
+  <nav class="sticky top-0 z-50 border-b border-border-soft bg-white/90 backdrop-blur-md">
     <div class="max-w-[1200px] mx-auto px-6 flex items-center justify-between py-4">
       <div class="flex items-center gap-3">
-        <button id="mobileMenuBtn" aria-label="Abrir menú" class="md:hidden text-black hover:text-[#0EA5E9] focus:outline-none mr-2 transition-colors">
+        <button id="mobileMenuBtn" aria-label="Abrir menú" class="md:hidden text-brand-blue hover:text-accent focus:outline-none transition-colors">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        <!-- Reemplaza logo.png con tu archivo en public/img -->
-        <img src="img/logo.png" alt="MauricioLillo.cl" class="h-6 w-auto object-contain">
-        <a href="#top" class="font-sans font-bold tracking-widest text-[14px] text-slate-900 no-underline hidden lg:block">APPSOURCE</a>
+        <img src="img/logo.png" alt="APPsource" class="h-6 w-auto object-contain">
+        <a href="#top" class="font-sans font-bold tracking-widest text-[14px] text-brand-blue no-underline hidden lg:block">APPSOURCE</a>
       </div>
-
-      <div class="hidden md:flex items-center gap-6 font-sans font-semibold text-[13px] uppercase text-black">
-        <a href="#dolores" class="hover:text-[#0EA5E9] transition-colors">Caos Actual</a>
-        <a href="#soluciones" class="hover:text-[#0EA5E9] transition-colors">Control Total</a>
-        <a href="#como-funciona" class="hover:text-[#0EA5E9] transition-colors">Migración Asistida</a>
-        <a href="#precios" class="hover:text-[#0EA5E9] transition-colors">Planes</a>
-        <a href="#faq" class="hover:text-[#0EA5E9] transition-colors">FAQ</a>
+      <div class="hidden md:flex items-center gap-6 font-sans font-semibold text-[13px] uppercase text-text-muted">
+        <a href="#problema" class="hover:text-accent transition-colors">El Problema</a>
+        <a href="#solucion" class="hover:text-accent transition-colors">La Solución</a>
+        <a href="#migracion" class="hover:text-accent transition-colors">Migración Segura</a>
+        <a href="#precios" class="hover:text-accent transition-colors">Planes</a>
       </div>
-
       <div class="flex items-center gap-3">
-        <a class="btn-outline text-[12px] py-1.5 px-3" id="waNavBtn" href="#precios">AGENDA TU REUNION GRATUITA</a>
+        <a class="border border-accent text-accent hover:bg-accent hover:text-white font-semibold text-[12px] py-2 px-4 rounded-sm uppercase transition-colors" href="#precios">Agendar Demo</a>
       </div>
-    </div>
-
-    <!-- Menú Móvil Overlay -->
-    <div id="mobileMenuOverlay" class="fixed inset-0 bg-white/50 z-[90] hidden md:hidden transition-opacity duration-300 opacity-0"></div>
-
-    <div id="mobileMenu" class="fixed top-0 left-0 bottom-0 w-1/2 bg-[#ffffff] shadow-2xl z-[100] transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-6 gap-6 font-sans font-semibold text-[16px] uppercase text-black border-r border-slate-200">
-      <button id="closeMobileMenuBtn" aria-label="Cerrar menú" class="absolute top-6 right-6 text-black hover:text-[#0EA5E9] focus:outline-none transition-colors">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-      <a href="#dolores" class="mobile-link hover:text-[#0EA5E9] transition-colors">Caos Actual</a>
-      <a href="#soluciones" class="mobile-link hover:text-[#0EA5E9] transition-colors">Control Total</a>
-      <a href="#como-funciona" class="mobile-link hover:text-[#0EA5E9] transition-colors">Migración Asistida</a>
-      <a href="#precios" class="mobile-link hover:text-[#0EA5E9] transition-colors">Planes</a>
-      <a href="#faq" class="mobile-link hover:text-[#0EA5E9] transition-colors">FAQ</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="py-16 md:py-24 bg-[#ffffff] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9IiNlNWU3ZWIiLz48L3N2Zz4=')] bg-repeat" id="top">
-    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-16 items-center">
-      <!-- Izquierda: Copy -->
-      <div class="z-10 bg-[#ffffff] p-2">
-        <h1 class="font-sans font-black leading-[1.05] text-5xl md:text-6xl tracking-tight-tech text-slate-900 uppercase">
-          Controla toda operacion de tu negocio<br>
-          <span class="text-slate-600">en un solo sistema</span>
+  <header class="py-20 md:py-32 bg-brand-blue text-white" id="top">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+      <div class="z-10">
+        <h1 class="font-sans font-black leading-[1.1] text-4xl md:text-5xl lg:text-6xl tracking-tight-tech uppercase">
+          ¿Sabes cuántos equipos tienes <span class="text-accent">disponibles ahora mismo?</span>
         </h1>
-
-        <p class="text-slate-600 text-xl md:text-2xl mt-6 max-w-[45ch]">
-          Gestiona tu empresa desde la tranquilidad de tener todo centralizado y automatizado.
+        <p class="text-slate-300 text-lg md:text-xl mt-6 max-w-[50ch] leading-relaxed">
+          Deja de perder dinero en equipos que no sabes dónde están. Controla tu inventario, clientes, técnicos y cobranza en un solo lugar, no en diez plataformas desconectadas.
         </p>
-
-        <div class="mt-8 flex flex-col sm:flex-row gap-4 font-mono">
-          <a class="btn-primary shadow-lg shadow-[#0EA5E9]/30 text-white border-none bg-[linear-gradient(to_bottom_right,#0284C7,rgba(14, 165, 233,0.8),#f0f9ff)] hover:brightness-110 whitespace-nowrap text-center" id="waHeroBtn" href="#" target="_blank" rel="noopener">AGENDA TU REUNION GRATUITA</a>
-          <a class="btn-outline whitespace-nowrap text-center" href="#como-funciona">CÓMO FUNCIONA</a>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 font-sans font-semibold">
+          <a class="bg-accent hover:bg-accent-hover text-white py-4 px-8 rounded-sm shadow-md text-center text-lg transition-colors uppercase tracking-wide" href="#precios">Ver cómo funciona</a>
+          <a class="border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white py-4 px-8 rounded-sm text-center text-lg transition-colors uppercase tracking-wide" href="#problema">Descubrir más</a>
         </div>
       </div>
-
-      <!-- Derecha: Video / Mockup UI -->
-      <div class="relative z-10 w-full perspective-1000 p-2">
-        <!-- Contenedor Redondeado con Degradado Brand -->
-        <div class="w-full bg-brand-gradient p-[1px] rounded-2xl shadow-xl overflow-hidden">
-          <div class="w-full bg-[#ffffff] rounded-2xl overflow-hidden">
-            <!-- Top Bar -->
-            <div class="border-b border-blue-900/30 px-4 py-3 flex items-center justify-between bg-white/60 backdrop-blur-sm">
-              <div class="flex gap-2">
-                <div class="w-3 h-3 border border-slate-200 bg-white"></div>
-                <div class="w-3 h-3 border border-slate-200 bg-white"></div>
-                <div class="w-3 h-3 border border-slate-200 bg-white"></div>
-              </div>
-              <div class="font-mono text-[11px] text-slate-600">ID: PANEL_CONTROL_001</div>
-              <div class="w-4 h-4 rounded-full border border-slate-200 bg-[#0EA5E9]"></div>
-            </div>
-            <!-- Video Container -->
-            <div class="relative w-full aspect-video bg-border-hard overflow-hidden">
-              <!-- The user asked to use this youtube link -->
-              <iframe class="w-full h-full" loading="lazy" src="https://www.youtube.com/embed/vtrigPEfQ_I?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
-            <!-- Bottom Bar -->
-            <div class="border-t border-blue-900/30 px-4 py-3 flex items-center justify-between bg-white/60 backdrop-blur-sm">
-              <div class="font-mono text-[11px] text-[#0EA5E9] font-bold flex items-center gap-2">
-                <div class="w-2 h-2 rounded-full bg-[#0EA5E9] animate-pulse"></div> STATUS: ONLINE
-              </div>
-              <div class="font-mono text-[11px] text-slate-600">00:00:10 / END</div>
-            </div>
+      <div class="relative z-10 w-full rounded-sm border border-slate-700 bg-slate-900 overflow-hidden shadow-2xl">
+        <div class="border-b border-slate-700 px-4 py-3 flex items-center justify-between bg-slate-800">
+          <div class="flex gap-2">
+            <div class="w-3 h-3 rounded-full bg-slate-600"></div>
+            <div class="w-3 h-3 rounded-full bg-slate-600"></div>
+            <div class="w-3 h-3 rounded-full bg-slate-600"></div>
           </div>
+          <div class="font-mono text-[11px] text-slate-400">ID: DASHBOARD_APP</div>
+        </div>
+        <div class="relative w-full aspect-video bg-black overflow-hidden">
+          <iframe class="w-full h-full" loading="lazy" src="https://www.youtube.com/embed/vtrigPEfQ_I?start=10" title="APPsource Dashboard" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Contenedor oscuro para evitar flash blanco en la animación reveal -->
-  <div class="w-full bg-[#ffffff]">
-
-    <!-- Dolores / Pain Points Section -->
-    <section class="py-20 md:py-32 text-slate-900 border-t border-sky-200 bg-[#ffffff]" id="dolores">
-      <div class="max-w-[1200px] mx-auto px-6">
-        <div class="mb-16 text-left md:text-center max-w-4xl mx-auto reveal">
-          <h2 class="font-sans font-black text-4xl md:text-5xl tracking-tight-tech uppercase text-slate-900 leading-tight">
-            ¿Agotado de triangular información entre plataformas que no se hablan?
-          </h2>
+  <!-- Social Proof -->
+  <section class="py-12 border-b border-border-soft bg-bg-secondary">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center">
+        <div class="flex flex-col items-center">
+          <span class="text-4xl font-black text-brand-blue mb-2">13 Años</span>
+          <span class="text-sm font-semibold text-text-muted uppercase tracking-wider">Operando ISP Reales</span>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-          <!-- Cards Column -->
-          <div class="flex flex-col justify-between gap-4">
-
-            <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-[rgba(14,165,233,0.15)] hover:scale-[1.02] transition-all duration-300 reveal">
-              <div class="p-6 rounded-2xl flex items-center gap-5 h-full bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-                <div class="w-14 h-14 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 flex-shrink-0 flex items-center justify-center relative z-10 overflow-hidden">
-                  <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88">
-                    </path>
-                  </svg>
-                </div>
-                <h3 class="font-sans font-black text-lg md:text-[19px] leading-snug relative z-10 text-slate-900">Desconexión total:
-                  <span class="font-normal text-[16px] md:text-[17px] block mt-1 text-slate-600">Usas un sistema para ventas, otro para
-                    el SII y otro para dar soporte.</span>
-                </h3>
-              </div>
-            </div>
-
-            <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-[rgba(14,165,233,0.15)] hover:scale-[1.02] transition-all duration-300 reveal">
-              <div class="p-6 rounded-2xl flex items-center gap-5 h-full bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-                <div class="w-14 h-14 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 flex-shrink-0 flex items-center justify-center relative z-10 overflow-hidden">
-                  <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z">
-                    </path>
-                  </svg>
-                </div>
-                <h3 class="font-sans font-black text-lg md:text-[19px] leading-snug relative z-10 text-slate-900">Conciliación manual:
-                  <span class="font-normal text-[16px] md:text-[17px] block mt-1 text-slate-600">Pierdes horas cruzando transferencias
-                    y
-                    pagos de Caja Vecina con clientes.</span>
-                </h3>
-              </div>
-            </div>
-
-            <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-[rgba(14,165,233,0.15)] hover:scale-[1.02] transition-all duration-300 reveal">
-              <div class="p-6 rounded-2xl flex items-center gap-5 h-full bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-                <div class="w-14 h-14 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 flex-shrink-0 flex items-center justify-center relative z-10 overflow-hidden">
-                  <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M22 10.5h-6m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z">
-                    </path>
-                  </svg>
-                </div>
-                <h3 class="font-sans font-black text-lg md:text-[19px] leading-snug relative z-10 text-slate-900">Miedo a la caída y multas:
-                  <span class="font-normal text-[16px] md:text-[17px] block mt-1 text-slate-600">Que tu sistema inestable falle, no se
-                    pueda facturar y caigan multas del SII.</span>
-                </h3>
-              </div>
-            </div>
-
-            <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-[rgba(14,165,233,0.15)] hover:scale-[1.02] transition-all duration-300 reveal">
-              <div class="p-6 rounded-2xl flex items-center gap-5 h-full bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-                <div class="w-14 h-14 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 flex-shrink-0 flex items-center justify-center relative z-10 overflow-hidden">
-                  <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5M3 3l18 18">
-                    </path>
-                  </svg>
-                </div>
-                <h3 class="font-sans font-black text-lg md:text-[19px] leading-snug relative z-10 text-slate-900">Call centers inútiles:
-                  <span class="font-normal text-[16px] md:text-[17px] block mt-1 text-slate-600">Cuando el software falla, te atiende
-                    soporte extranjero que no resuelve tu problema.</span>
-                </h3>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Image Container -->
-          <div class="relative w-full h-full min-h-[400px] border border-slate-200 rounded-2xl overflow-hidden bg-white p-8 flex flex-col justify-end group reveal">
-            <!-- Imagen real que puedes cambiar -->
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&amp;fit=crop&amp;q=80&amp;w=1000" alt="Sala de espera vacía" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700 z-0">
-
-            <!-- Overlay gradiente para asegurar lectura del texto -->
-            <div class="absolute inset-0 bg-gradient-to-t via-[#f0f9ff]/60 to-transparent z-10"></div>
-
-            <!-- Contenido de Texto -->
-            <div class="relative z-20 bg-[#e4f6ff]/90 border border-[#0ea5e9] p-6 rounded-xl border-l-4 border-l-[#0EA5E9]">
-              <h3 class="font-sans font-bold text-2xl mb-2 leading-tight tracking-tight-tech uppercase text-slate-900">
-                Otro
-                día perdiendo horas.</h3>
-              <p class="text-[17px] md:text-[19px] leading-relaxed text-slate-600">
-                Cuánto tiempo de tu equipo se pierde haciendo tareas manuales que podrían ser automáticas.
-              </p>
-            </div>
-          </div>
-
+        <div class="flex flex-col items-center border-t md:border-t-0 md:border-l md:border-r border-border-hard pt-8 md:pt-0">
+          <span class="text-4xl font-black text-brand-blue mb-2">+16</span>
+          <span class="text-sm font-semibold text-text-muted uppercase tracking-wider">Operadores en Producción</span>
+        </div>
+        <div class="flex flex-col items-center text-left max-w-sm mx-auto border-t md:border-t-0 border-border-hard pt-8 md:pt-0">
+          <p class="text-sm text-text-main italic">"Migramos a otra plataforma por probar... a los 6 meses volvimos porque los equipos se perdían y la facturación era un caos. Con APPsource la tranquilidad es real."</p>
+          <span class="text-xs font-bold text-accent mt-3 uppercase tracking-widest">— Proveedor WISP Zona Sur</span>
         </div>
       </div>
-    </section>
 
-    <!-- Beneficios / Soluciones Section -->
-    <section class="py-20 md:py-32 text-slate-900 border-t border-sky-200 bg-[#ffffff]" id="soluciones">
-      <div class="max-w-[1200px] mx-auto px-6">
-        <div class="mb-16 text-left md:text-center max-w-4xl mx-auto reveal">
-          <h2 class="font-sans font-black text-4xl md:text-5xl tracking-tight-tech uppercase text-slate-900 leading-tight flex items-center justify-start md:justify-center gap-4">
-            TOMA EL CONTROL DE TU NEGOCIO
-            <img src="img/bombilla.png" alt="Bombilla" class="w-10 h-10 md:w-14 md:h-14 object-contain">
-          </h2>
-          <p class="font-mono text-[15px] md:text-[16px] text-[#0EA5E9] mt-4 uppercase tracking-widest">Lo que
-            consigues con un sistema robusto</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-
-          <!-- Image Container (Left side) -->
-          <div class="relative w-full h-full min-h-[400px] border border-blue-900/30 rounded-2xl overflow-hidden bg-white p-8 flex flex-col justify-end group lg:order-1 order-2 shadow-[0_0_40px_-15px_rgba(14, 165, 233,0.2)] reveal">
-            <!-- Imagen positiva -->
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;q=80&amp;w=1000" alt="Negocio exitoso" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 z-0">
-
-            <div class="absolute inset-0 bg-gradient-to-t via-[#f0f9ff]/40 to-transparent z-10"></div>
-
-            <div class="relative z-20 bg-[#e4f6ff]/90 border border-blue-500/20 p-6 rounded-xl border-l-4 border-l-[#0EA5E9]">
-              <h3 class="font-sans font-bold text-2xl mb-2 leading-tight tracking-tight-tech uppercase text-slate-900">
-                TU NEGOCIO BLINDADO</h3>
-              <p class="text-[17px] md:text-[19px] leading-relaxed text-slate-600">
-                Automatiza el trabajo manual y asegura tu operación en piloto automático.
-              </p>
-            </div>
+      <!-- Logo Carousel -->
+      <div class="mt-16 pt-10 border-t border-border-hard overflow-hidden relative w-full">
+        <p class="text-xs font-bold text-text-muted uppercase tracking-widest mb-8 text-center">ISP que ya confían en nosotros</p>
+        <!-- Fade masks -->
+        <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-bg-secondary to-transparent z-10 pointer-events-none mt-16"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-bg-secondary to-transparent z-10 pointer-events-none mt-16"></div>
+        
+        <div class="flex w-max animate-marquee hover:[animation-play-state:paused]">
+          <!-- First set of logos -->
+          <div class="flex items-center gap-16 px-8">
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 1</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 2</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 3</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 4</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 5</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 6</div>
           </div>
-
-          <!-- Cards Column (Right side) -->
-          <div class="flex flex-col justify-between gap-4 lg:order-2 order-1">
-
-            <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-[rgba(14, 165, 233,0.25)] hover:scale-[1.02] transition-all duration-300 reveal">
-              <div class="p-6 rounded-2xl flex items-center gap-5 h-full relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-
-                <div class="w-14 h-14 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 flex-shrink-0 flex items-center justify-center relative z-10 overflow-hidden">
-                  <img src="img/google-maps.png" alt="Google Maps" class="w-9 h-9 object-contain">
-                </div>
-                <h3 class="font-sans font-black text-lg md:text-[19px] leading-snug relative z-10 text-slate-900">
-                  Control en un solo lugar:
-                  <span class="font-normal text-[16px] md:text-[17px] block mt-1 text-slate-600">Unifica clientes, red,
-                    inventario, técnicos y cobranza en una sola pantalla.</span>
-                </h3>
-              </div>
-            </div>
-
-            <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-[rgba(14, 165, 233,0.25)] hover:scale-[1.02] transition-all duration-300 reveal">
-              <div class="p-6 rounded-2xl flex items-center gap-5 h-full relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-
-                <div class="w-14 h-14 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 flex-shrink-0 flex items-center justify-center relative z-10 overflow-hidden">
-                  <img src="img/competitive.png" alt="Competitive" class="w-9 h-9 object-contain">
-                </div>
-                <h3 class="font-sans font-black text-lg md:text-[19px] leading-snug relative z-10 text-slate-900">
-                  Seguridad y Estabilidad:
-                  <span class="font-normal text-[16px] md:text-[17px] block mt-1 text-slate-600">13 años operando
-                    negocios. Uptime garantizado y soporte técnico local.</span>
-                </h3>
-              </div>
-            </div>
-
-            <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-[rgba(14, 165, 233,0.25)] hover:scale-[1.02] transition-all duration-300 reveal">
-              <div class="p-6 rounded-2xl flex items-center gap-5 h-full relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-
-                <div class="w-14 h-14 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 flex-shrink-0 flex items-center justify-center relative z-10 overflow-hidden">
-                  <img src="img/customer-review.png" alt="Customer Review" class="w-9 h-9 object-contain">
-                </div>
-                <h3 class="font-sans font-black text-lg md:text-[19px] leading-snug relative z-10 text-slate-900">
-                  Facturación SII:
-                  <span class="font-normal text-[16px] md:text-[17px] block mt-1 text-slate-600">El sistema cobra vía
-                    Webpay/BancoEstado, concilia y emite boletas del SII en automático.</span>
-                </h3>
-              </div>
-            </div>
-
-            <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-[rgba(14, 165, 233,0.25)] hover:scale-[1.02] transition-all duration-300 reveal">
-              <div class="p-6 rounded-2xl flex items-center gap-5 h-full relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-
-                <div class="w-14 h-14 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 flex-shrink-0 flex items-center justify-center relative z-10 overflow-hidden">
-                  <img src="img/whatsapp.png" alt="WhatsApp Notify" class="w-full h-full object-cover">
-                </div>
-                <h3 class="font-sans font-black text-lg md:text-[19px] leading-snug relative z-10 text-slate-900">
-                  Libertad
-                  Operativa:
-                  <span class="font-normal text-[16px] md:text-[17px] block mt-1 text-slate-600">Más de 30 tareas
-                    corriendo en el fondo que te devuelven tu tiempo.</span>
-                </h3>
-              </div>
-            </div>
-
+          <!-- Duplicated set of logos for infinite scroll -->
+          <div class="flex items-center gap-16 px-8">
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 1</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 2</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 3</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 4</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 5</div>
+            <div class="h-12 w-32 bg-slate-200 flex items-center justify-center rounded-sm grayscale opacity-70 font-mono text-sm font-bold text-slate-500">LOGO ISP 6</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Step-by-Step (Blueprint Style) -->
-    <section class="py-20 md:py-32 text-slate-900 reveal border-t border-sky-200 bg-[#ffffff]" id="como-funciona">
-      <div class="max-w-[1200px] mx-auto px-6">
-        <div class="mb-16 text-left md:text-center flex flex-col items-start md:items-center">
-          <h2 class="font-sans font-black text-4xl md:text-5xl tracking-tight-tech uppercase text-slate-900">
-            MIGRACIÓN ASISTIDA SIN PÉRDIDA DE DATOS
-          </h2>
-          <p class="font-mono text-[16px] md:text-[18px] text-[#0EA5E9] mt-4 max-w-2xl leading-relaxed">
-            Un proceso guiado para cambiarte a Appsource sin fricción
-          </p>
-          <div class="font-mono text-[14px] md:text-[16px] text-slate-900 mt-8 flex items-center justify-start md:justify-center gap-2 flex-wrap bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 px-6 py-3 rounded-full">
-            <span>🔎 Diagnóstico</span> <span class="text-[#0EA5E9] mx-2">→</span>
-            <span>🚀 Migración</span> <span class="text-[#0EA5E9] mx-2">→</span>
-            <span>⚙️ Operación</span>
-          </div>
-        </div>
-
-        <!-- CSS Grid 1x3 with borders and rounded corners -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          <!-- Step 1 -->
-          <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-[rgba(14, 165, 233,0.2)] hover:scale-105 transition-all duration-300">
-            <div class="p-8 rounded-2xl h-full flex flex-col relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-              <div class="flex justify-between items-center mb-6 relative z-10">
-                <div class="font-mono text-2xl font-bold text-slate-500">01 //</div>
-                <div class="font-mono text-[11px] md:text-[12px] uppercase bg-[#0EA5E9]/10 text-[#0EA5E9] px-3 py-1 rounded-full border border-[#0EA5E9]/30 tracking-widest font-bold">
-                  DIAGNÓSTICO</div>
-              </div>
-              <h3 class="font-sans font-bold text-xl uppercase mb-3 text-slate-900 relative z-10">Evaluación de Origen
-              </h3>
-              <p class="text-slate-600 text-[16px] md:text-[18px] leading-relaxed relative z-10">
-                Revisamos cómo está tu información actual (MicroWISP, SmartOLT o Excel). Trazamos un mapa para exportar
-                todo de manera íntegra.
-              </p>
-
-              <!-- Reemplazado por Imagen Genérica con pmFadeIn -->
-              <div class="mt-8 border border-blue-900/30 bg-white w-full aspect-video overflow-hidden rounded-xl">
-                <img src="img/p1.png" alt="Paso 1" class="w-full h-full object-cover pm-fade-in transition-all duration-300">
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-[rgba(14, 165, 233,0.2)] hover:scale-105 transition-all duration-300">
-            <div class="p-8 rounded-2xl h-full flex flex-col relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-              <div class="flex justify-between items-center mb-6 relative z-10">
-                <div class="font-mono text-2xl font-bold text-[#0EA5E9]">02 //</div>
-                <div class="font-mono text-[11px] md:text-[12px] uppercase bg-[#0EA5E9]/10 text-[#0EA5E9] px-3 py-1 rounded-full border border-[#0EA5E9]/30 tracking-widest font-bold">
-                  MIGRACIÓN</div>
-              </div>
-              <h3 class="font-sans font-bold text-xl uppercase mb-3 text-slate-900 relative z-10">Traspaso de Datos</h3>
-              <p class="text-slate-600 text-[16px] md:text-[18px] leading-relaxed relative z-10">
-                Garantizamos la migración completa de tu historial de clientes, red e inventario. El miedo al cambio
-                desaparece con nuestro equipo técnico.
-              </p>
-
-              <!-- Reemplazado por Imagen Genérica -->
-              <div class="mt-8 border border-blue-900/30 bg-white w-full aspect-video overflow-hidden rounded-xl">
-                <img src="img/p2.png" alt="Paso 2" class="w-full h-full object-cover pm-fade-in transition-all duration-300">
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="border-brand-gradient p-[1px] rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-[rgba(14, 165, 233,0.2)] hover:scale-105 transition-all duration-300">
-            <div class="p-8 rounded-2xl h-full flex flex-col relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-              <div class="flex justify-between items-center mb-6 relative z-10">
-                <div class="font-mono text-2xl font-bold text-slate-500">03 //</div>
-                <div class="font-mono text-[11px] md:text-[12px] uppercase bg-[#0EA5E9]/10 text-[#0EA5E9] px-3 py-1 rounded-full border border-[#0EA5E9]/30 tracking-widest font-bold">
-                  OPERACIÓN</div>
-              </div>
-              <h3 class="font-sans font-bold text-xl uppercase mb-3 text-slate-900 relative z-10">Onboarding &amp;
-                Soporte</h3>
-              <p class="text-slate-600 text-[16px] md:text-[18px] leading-relaxed relative z-10">
-                Tu negocio arranca con el nuevo panel. Nuestro soporte en Chile te acompaña de forma directa para
-                cualquier duda de tu equipo.
-              </p>
-
-              <!-- Reemplazado por Imagen Genérica -->
-              <div class="mt-8 border border-blue-900/30 bg-white w-full aspect-video overflow-hidden rounded-xl">
-                <img src="img/p3.png" alt="Paso 3" class="w-full h-full object-cover pm-fade-in transition-all duration-300">
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Ruta de Inversión / Sistema por etapas -->
-    <section class="py-20 md:py-32 text-slate-900 reveal border-t border-sky-200 bg-[#ffffff]" id="precios">
-      <div class="max-w-[1200px] mx-auto px-6">
-        <div class="mb-16 flex flex-col md:flex-row justify-between md:items-end gap-6 text-left">
-          <div class="mx-auto md:mx-0">
-            <h2 class="font-sans font-black text-4xl tracking-tight-tech uppercase text-slate-900">INVERSIÓN</h2>
-            <p class="font-mono text-[16px] md:text-[18px] text-slate-600 mt-2">TRANSPARENCIA TOTAL Y RETORNO
-              GARANTIZADO
-            </p>
-          </div>
-          <div class="hidden md:block font-mono text-[11px] uppercase bg-[#ffffff] border border-slate-200 px-3 py-1 text-slate-900 rounded-full">
-            MÉTODO ESTRUCTURADO
-          </div>
-        </div>
-
-        <div class="relative w-full mt-10">
-          <!-- Timeline Conector Line (Desktop) -->
-          <div class="hidden lg:block absolute top-[20px] left-[15%] right-[15%] h-[2px] bg-slate-700 z-0">
-            <div id="timeline-progress" class="h-full bg-[#0EA5E9] transition-all duration-500 ease-in-out w-0 shadow-[0_0_10px_rgba(14, 165, 233,0.5)]">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10 timeline-container">
-
-            <!-- Stage 1 -->
-            <div class="timeline-step cursor-pointer group flex flex-col h-full transition-all duration-300" data-step="1">
-              <div class="flex items-center gap-4 mb-6 lg:mb-8 lg:justify-center">
-                <div class="step-indicator w-10 h-10 rounded-full bg-[#0EA5E9] text-slate-900 border-4 border-[#f0f9ff] flex items-center justify-center font-black text-sm z-10 transition-all duration-300 shadow-[0_0_15px_rgba(14,165,233,0.4)] relative">
-                  <span class="step-num">01</span>
-                </div>
-                <div class="step-text font-mono text-[11px] tracking-widest text-[#0EA5E9] uppercase lg:hidden font-bold transition-colors">
-                  Paso 1 de 3</div>
-              </div>
-
-              <div class="step-card flex-grow p-8 rounded-2xl border border-[#0EA5E9]/50 transition-all duration-300 relative overflow-hidden group-hover:border-[#0EA5E9]/80 group-hover:shadow-[0_0_25px_rgba(14,165,233,0.15)] bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-                
-
-                <div class="mb-6 relative z-10 lg:min-h-[220px]">
-                  <h3 class="step-title font-sans font-black text-2xl uppercase text-[#0EA5E9] mb-2 transition-colors">
-                    Migración Asistida Inicial</h3>
-                  <div class="flex items-baseline gap-2">
-                    <span class="font-sans font-black text-4xl text-slate-900">EVALUACIÓN GRATUITA</span>
-                  </div>
-                  <p class="text-[15px] mt-4 leading-relaxed font-mono text-slate-600">Análisis de factibilidad para
-                    importar tus bases de datos actuales con cero pérdida de información.</p>
-                </div>
-
-                <div class="flex-grow relative z-10 border-t border-[#0ea5e9]/80 pt-6">
-                  <ul class="space-y-4 mb-6 text-[15px] text-slate-600">
-                    <li class="flex items-start gap-3">
-                      <svg class="w-5 h-5 step-icon text-[#0EA5E9] shrink-0 mt-0.5 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      <span><strong class="text-slate-900">Primera reunión:</strong> Analizamos a fondo tu modelo,
-                        herramientas y público.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg class="w-5 h-5 step-icon text-[#0EA5E9] shrink-0 mt-0.5 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      <span><strong class="text-slate-900">Segunda reunión:</strong> Presentamos un plan a medida y
-                        estrategia Meta Ads.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="step-footer mt-auto relative z-10 bg-[#0EA5E9]/10 border border-[#0EA5E9]/30 rounded-xl p-4 transition-colors">
-                  <p class="text-[14px] italic text-slate-600">Claridad sobre qué áreas potenciar y cómo arrancar tu
-                    transformación.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Stage 2 -->
-            <div class="timeline-step cursor-pointer group flex flex-col h-full opacity-60 hover:opacity-100 transition-all duration-300 transform lg:translate-y-0" data-step="2">
-              <div class="flex items-center gap-4 mb-6 lg:mb-8 lg:justify-center">
-                <div class="step-indicator w-10 h-10 rounded-full bg-slate-700 text-slate-600 border-4 border-[#f0f9ff] flex items-center justify-center font-black text-sm z-10 transition-all duration-300 relative">
-                  <span class="step-num">02</span>
-                </div>
-                <div class="step-text font-mono text-[11px] tracking-widest text-slate-500 uppercase lg:hidden font-bold transition-colors">
-                  Paso 2 de 3</div>
-              </div>
-
-              <div class="step-card flex-grow p-8 rounded-2xl border border-sky-200 transition-all duration-300 relative overflow-hidden group-hover:border-gray-600 bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-                
-
-                <div class="mb-6 relative z-10 lg:min-h-[220px]">
-                  <h3 class="step-title font-sans font-black text-2xl uppercase mb-2 transition-colors text-slate-900">
-                    Activación del Ecosistema</h3>
-                  <div class="flex items-baseline gap-2 flex-wrap">
-                    <span class="font-sans font-black text-3xl md:text-4xl text-slate-900">A COTIZAR</span>
-                  </div>
-                  <span class="font-mono text-[13px] font-bold tracking-widest uppercase mt-1 block step-subtitle transition-colors text-slate-600">PAGO
-                    ÚNICO</span>
-                  <p class="text-[15px] mt-4 leading-relaxed font-mono text-slate-600">Configuración completa del panel,
-                    integración con SII y pasarelas de pago locales.</p>
-                </div>
-
-                <div class="flex-grow relative z-10 border-t border-[#0ea5e9]/80 pt-6">
-                  <ul class="space-y-4 mb-6 text-[15px] text-slate-600">
-                    <li class="flex items-start gap-3">
-                      <svg class="w-5 h-5 step-icon shrink-0 mt-0.5 transition-colors text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      <span>Configuración técnica completa de ecosistemas de ventas.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg class="w-5 h-5 step-icon shrink-0 mt-0.5 transition-colors text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      <span>Puesta en marcha de sistemas para captación recurrente.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="step-footer mt-auto relative z-10 bg-slate-50 border border-sky-100 rounded-xl p-4 transition-colors">
-                  <p class="text-[14px] text-slate-500 italic">No incluye inversión de fondos para Meta Ads.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Stage 3 -->
-            <div class="timeline-step cursor-pointer group flex flex-col h-full opacity-60 hover:opacity-100 transition-all duration-300 transform lg:translate-y-0" data-step="3">
-              <div class="flex items-center gap-4 mb-6 lg:mb-8 lg:justify-center">
-                <div class="step-indicator w-10 h-10 rounded-full bg-slate-700 text-slate-600 border-4 border-[#f0f9ff] flex items-center justify-center font-black text-sm z-10 transition-all duration-300 relative">
-                  <span class="step-num">03</span>
-                </div>
-                <div class="step-text font-mono text-[11px] tracking-widest text-slate-500 uppercase lg:hidden font-bold transition-colors">
-                  Paso 3 de 3</div>
-              </div>
-
-              <div class="step-card flex-grow p-8 rounded-2xl border border-sky-200 transition-all duration-300 relative overflow-hidden group-hover:border-gray-600 bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-                
-
-                <div class="mb-6 relative z-10 lg:min-h-[220px]">
-                  <h3 class="step-title font-sans font-black text-2xl uppercase mb-2 transition-colors text-slate-900">
-                    Licencia SaaS Appsource</h3>
-                  <div class="flex items-baseline gap-2">
-                    <span class="font-sans font-black text-3xl md:text-4xl text-slate-900">SUSCRIPCIÓN MENSUAL</span>
-                  </div>
-                  <p class="text-[15px] mt-4 leading-relaxed font-mono text-slate-600">Incluye hosting estable,
-                    mantenimiento de las integraciones, actualizaciones y soporte técnico directo en Chile.</p>
-                </div>
-
-                <div class="flex-grow relative z-10 border-t border-[#0ea5e9]/80 pt-6">
-                  <ul class="space-y-4 mb-6 text-[15px] text-slate-600">
-                    <li class="flex items-start gap-3">
-                      <svg class="w-5 h-5 step-icon shrink-0 mt-0.5 transition-colors text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      <span>Análisis riguroso de resultados y métricas clave.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <svg class="w-5 h-5 step-icon shrink-0 mt-0.5 transition-colors text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                      <span>Ajuste de mercados, públicos y creativos publicitarios.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="step-footer mt-auto relative z-10 bg-slate-50 border border-sky-100 rounded-xl p-4 transition-colors">
-                  <p class="text-[14px] text-slate-500 italic">Optimizar lo que funciona y abrir nuevas puertas de
-                    crecimiento.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="mt-16 text-center hidden lg:flex justify-center w-full">
-            <div id="timeline-status-container" class="inline-flex items-center gap-3 font-mono text-[11px] md:text-[13px] uppercase tracking-widest bg-[#e4f6ff] border border-[#0ea5e9] px-8 py-3 rounded-full shadow-lg text-slate-600">
-              <span class="status-item text-[#0EA5E9] font-bold transition-all">1. DIAGNÓSTICO</span>
-              <span class="opacity-40 px-2 transition-all">→</span>
-              <span class="status-item opacity-50 transition-all">2. MIGRACIÓN</span>
-              <span class="opacity-40 px-2 transition-all">→</span>
-              <span class="status-item opacity-50 transition-all">3. OPERACIÓN</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonios Section -->
-    <section class="py-20 md:py-32 text-slate-900 reveal border-t border-sky-200 bg-[#ffffff]">
-      <div class="max-w-[1200px] mx-auto px-6">
-        <div class="mb-16 flex flex-col items-start md:items-center text-left md:text-center gap-4">
-          <h2 class="font-sans font-black text-4xl tracking-tight-tech uppercase text-slate-900">Testimonios</h2>
-          <p class="font-mono text-[15px] md:text-[16px] text-[#0EA5E9]">RESULTADOS COMPROBADOS</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-          <!-- Video Testimonial 9:16 -->
-          <div class="group border-brand-gradient p-[1px] rounded-2xl hover:shadow-2xl hover:shadow-[rgba(14, 165, 233,0.2)] hover:scale-105 transition-all duration-300 mx-auto w-full max-w-[320px] lg:max-w-none lg:mx-0">
-            <div class="rounded-2xl h-full relative overflow-hidden aspect-[9/16] bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-              <!-- Placeholder vertical video -->
-              <video class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" autoplay="" loop="" muted="" playsinline="">
-                <source src="" type="video/mp4">
-              </video>
-              <!-- Custom Play Button Overlay -->
-              <div class="absolute inset-0 flex items-center justify-center bg-white/40 group-hover:bg-white/20 transition-colors">
-                <div class="w-14 h-14 rounded-full bg-[linear-gradient(to_bottom_right,#0284C7,rgba(14, 165, 233,0.8))] flex items-center justify-center cursor-pointer shadow-lg shadow-[#0EA5E9]/50 hover:scale-110 transition-transform duration-300">
-                  <svg class="w-6 h-6 text-slate-900 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M4 4l12 6-12 6V4z"></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="absolute bottom-4 left-4 right-4 text-center">
-                <p class="font-sans font-bold text-slate-900 shadow-sm drop-shadow-md">Caso de Éxito - Operación Local
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Text Testimonial 1 -->
-          <div class="group border-brand-gradient p-[1px] rounded-2xl hover:shadow-2xl hover:shadow-[rgba(14, 165, 233,0.2)] hover:scale-105 transition-all duration-300">
-            <div class="rounded-2xl p-8 h-full flex flex-col relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-              <!-- Decorative Glow -->
-              <div class="absolute -top-16 -right-16 w-64 h-64 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#0EA5E9]/30 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity">
-              </div>
-
-              <!-- Header -->
-              <div class="flex items-center justify-between border-b border-[#0ea5e9]/80 pb-5 mb-5 relative z-10">
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 rounded-full bg-[#ffffff] border border-gray-700 overflow-hidden flex items-center justify-center shadow-inner">
-                    <span class="font-sans font-bold text-lg text-slate-600">CL</span>
-                  </div>
-                  <div>
-                    <h4 class="font-sans font-bold text-[16px] leading-tight text-slate-900">Proveedor de Internet (ISP)
-                    </h4>
-                    <p class="text-[12px] text-[#0EA5E9] font-mono mt-1">+3,500 Clientes Activos</p>
-                  </div>
-                </div>
-                <img src="img/Instagram_logo.svg" alt="Instagram" class="w-7 h-7 opacity-70 group-hover:opacity-100 transition-opacity">
-              </div>
-
-              <!-- Content -->
-              <div class="relative z-10 flex-grow flex flex-col">
-                <h3 class="font-sans font-bold text-xl mb-3 text-slate-900">"Migración transparente y cortes
-                  automáticos"
-                </h3>
-                <p class="text-[17px] md:text-[19px] leading-relaxed flex-grow text-slate-600">
-                  Teníamos pánico de cambiar de sistema y perder a los clientes aprovisionados. Appsource hizo la
-                  migración impecable y ahora los cortes y la facturación corren solos.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Text Testimonial 2 -->
-          <div class="group border-brand-gradient p-[1px] rounded-2xl hover:shadow-2xl hover:shadow-[rgba(14, 165, 233,0.2)] hover:scale-105 transition-all duration-300">
-            <div class="rounded-2xl p-8 h-full flex flex-col relative overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#e4f6ff]">
-              <!-- Decorative Glow -->
-              <div class="absolute -top-16 -right-16 w-64 h-64 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#0EA5E9]/30 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity">
-              </div>
-
-              <!-- Header -->
-              <div class="flex items-center justify-between border-b border-[#0ea5e9]/80 pb-5 mb-5 relative z-10">
-                <div class="flex items-center gap-4">
-                  <div class="w-12 h-12 rounded-full bg-[#ffffff] border border-gray-700 overflow-hidden flex items-center justify-center shadow-inner">
-                    <span class="font-sans font-bold text-lg text-slate-600">B2B</span>
-                  </div>
-                  <div>
-                    <h4 class="font-sans font-bold text-[16px] leading-tight text-slate-900">Distribuidora Local</h4>
-                    <p class="text-[12px] text-[#0EA5E9] font-mono mt-1">+400 Pedidos Diarios</p>
-                  </div>
-                </div>
-                <img src="img/Instagram_logo.svg" alt="Instagram" class="w-7 h-7 opacity-70 group-hover:opacity-100 transition-opacity">
-              </div>
-
-              <!-- Content -->
-              <div class="relative z-10 flex-grow flex flex-col">
-                <h3 class="font-sans font-bold text-xl mb-3 text-slate-900">"Soporte local que entiende nuestro negocio"
-                </h3>
-                <p class="text-[17px] md:text-[19px] leading-relaxed flex-grow text-slate-600">
-                  Unificamos el inventario y las boletas del SII sin tener que usar planillas de Excel nunca más. Lo
-                  mejor es llamar a soporte y que te entienda alguien acá en Chile.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ / Accordion Section -->
-    <section class="py-20 md:py-32 text-slate-900 border-[#0ea5e9] reveal border-t border-sky-200 bg-[#ffffff]" id="faq">
-      <div class="max-w-[800px] mx-auto px-6">
-        <div class="mb-12">
-          <h2 class="font-sans font-black text-3xl tracking-tight-tech uppercase">Base de Conocimiento</h2>
-          <p class="font-mono text-[15px] md:text-[16px] text-slate-600 mt-2">PREGUNTAS FRECUENTES (FAQ)</p>
-        </div>
-
-        <div class="border-t border-[#0ea5e9]">
-          <details class="group py-6 border-b border-[#0ea5e9]" open="">
-            <summary class="cursor-pointer font-bold text-[16px] uppercase list-none flex justify-between items-center text-slate-900 hover:text-[#0EA5E9] transition-colors">
-              ¿Perderé el historial de clientes si cambio de software?
-            </summary>
-            <p class="text-slate-600 mt-4 text-[16px] md:text-[18px] leading-relaxed pr-8">
-              En absoluto. Nuestro pilar es la Migración Asistida. Exportamos tus datos desde tu plataforma actual y
-              garantizamos la integridad de tu historial sin pérdida de información.
-            </p>
-          </details>
-
-          <details class="group py-6 border-b border-[#0ea5e9]">
-            <summary class="cursor-pointer font-bold text-[16px] uppercase list-none flex justify-between items-center text-slate-900 hover:text-[#0EA5E9] transition-colors">
-              ¿Qué pasa si el sistema de facturación falla?
-            </summary>
-            <p class="text-slate-600 mt-4 text-[16px] md:text-[18px] leading-relaxed pr-8">
-              Nuestra arquitectura está probada por 13 años. Contamos con redundancia y, ante cualquier duda, nuestro
-              equipo de soporte técnico chileno responde de inmediato, sin call centers externos.
-            </p>
-          </details>
-
-          <details class="group py-6 border-b border-[#0ea5e9]">
-            <summary class="cursor-pointer font-bold text-[16px] uppercase list-none flex justify-between items-center text-slate-900 hover:text-[#0EA5E9] transition-colors">
-              ¿Se integra con SII y Webpay de manera automática?
-            </summary>
-            <p class="text-slate-600 mt-4 text-[16px] md:text-[18px] leading-relaxed pr-8">
-              Sí. Appsource hace la conciliación bancaria y emite la boleta electrónica del SII automáticamente,
-              ahorrándote horas de cruces manuales diarios.
-            </p>
-          </details>
-
-          <details class="group py-6 border-b border-[#0ea5e9]">
-            <summary class="cursor-pointer font-bold text-[16px] uppercase list-none flex justify-between items-center text-slate-900 hover:text-[#0EA5E9] transition-colors">
-              ¿Es solo para Proveedores de Internet (ISPs)?
-            </summary>
-            <p class="text-slate-600 mt-4 text-[16px] md:text-[18px] leading-relaxed pr-8">
-              Nacimos en la industria ISP (la más exigente técnicamente), pero ahora escalamos nuestro ERP a PYMEs
-              tradicionales, aportando control de grado industrial a tu farmacia, bodega o empresa.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA / Footer -->
-    <section class="py-20 text-slate-900 border-[#0ea5e9] reveal border-t border-sky-200 bg-[#ffffff]">
-      <div class="max-w-[1000px] mx-auto px-6 text-center">
-        <h2 class="font-sans font-black text-3xl md:text-5xl lg:text-6xl tracking-tight-tech text-slate-900 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
-          <span class="uppercase">Toma el control de tu negocio</span>
-          <a id="waFinalBtn" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-2 rounded-xl bg-[linear-gradient(to_bottom_right,#0284C7,rgba(14,165,233,0.8))] shadow-[0_0_25px_rgba(14,165,233,0.3)] hover:shadow-[0_0_40px_rgba(14,165,233,0.6)] hover:-translate-y-1 transition-all duration-300 border border-[#0EA5E9]/50 text-white font-black uppercase transform rotate-2 hover:rotate-0">
-            MIGRACIÓN ASISTIDA
-          </a>
+  <!-- Pain -> Feature (1 to 1) -->
+  <section class="py-20 md:py-32 text-brand-blue bg-bg-primary" id="problema">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="mb-16 text-center max-w-4xl mx-auto">
+        <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight">
+          Cada problema en tu operación<br>tiene una solución integrada
         </h2>
+        <p class="text-text-muted mt-4 text-lg">Dejamos atrás las herramientas genéricas. Construimos el sistema que todo ISP en Chile necesita.</p>
       </div>
-    </section>
 
-    <footer class="py-4 md:py-6 border-[#0ea5e9] border-t border-sky-200 bg-[#ffffff]">
-      <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8">
-        <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-          <img src="img/LogoFooter.png" alt="Logo Appsource" class="h-16 md:h-20 w-auto object-contain rounded-xl">
-          <span class="font-mono font-bold text-[14px] md:text-[16px] text-slate-900 uppercase">APPSOURCE ©
-            2026</span>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <!-- Feature 1 -->
+        <div class="border border-border-soft p-8 rounded-sm bg-white shadow-sm hover:shadow-md transition-shadow">
+          <p class="text-sm font-mono text-accent mb-2 uppercase font-bold tracking-wide">EL DOLOR</p>
+          <h3 class="text-xl font-bold mb-4">"No sé cuántos equipos tengo disponibles"</h3>
+          <div class="h-px w-full bg-border-soft mb-6"></div>
+          <p class="text-sm font-mono text-brand-blue mb-2 uppercase font-bold tracking-wide flex items-center gap-2">
+            <svg class="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            LA SOLUCIÓN
+          </p>
+          <p class="text-text-muted text-lg">Inventario centralizado y filtros avanzados. Sabrás exactamente dónde está cada ONT o router, ya sea en bodega, asignado a un técnico o instalado en un cliente.</p>
         </div>
-        <span class="font-mono text-[13px] md:text-[15px] text-slate-600 uppercase">SANTIAGO DE CHILE</span>
+
+        <!-- Feature 2 -->
+        <div class="border border-border-soft p-8 rounded-sm bg-white shadow-sm hover:shadow-md transition-shadow">
+          <p class="text-sm font-mono text-accent mb-2 uppercase font-bold tracking-wide">EL DOLOR</p>
+          <h3 class="text-xl font-bold mb-4">"No sé qué técnico tiene asignado un trabajo"</h3>
+          <div class="h-px w-full bg-border-soft mb-6"></div>
+          <p class="text-sm font-mono text-brand-blue mb-2 uppercase font-bold tracking-wide flex items-center gap-2">
+            <svg class="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            LA SOLUCIÓN
+          </p>
+          <p class="text-text-muted text-lg">Órdenes de trabajo (OT) con asignación clara y firma digital en terreno. Registra la evidencia gráfica y coordina tu equipo de técnicos al instante.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="border border-border-soft p-8 rounded-sm bg-white shadow-sm hover:shadow-md transition-shadow">
+          <p class="text-sm font-mono text-accent mb-2 uppercase font-bold tracking-wide">EL DOLOR</p>
+          <h3 class="text-xl font-bold mb-4">"No sé en qué poste debo subirme"</h3>
+          <div class="h-px w-full bg-border-soft mb-6"></div>
+          <p class="text-sm font-mono text-brand-blue mb-2 uppercase font-bold tracking-wide flex items-center gap-2">
+            <svg class="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            LA SOLUCIÓN
+          </p>
+          <p class="text-text-muted text-lg">Mapa técnico interactivo. Visualiza todas las OLT, NAP, cajas de empalme y su asignación a cada cliente en tiempo real sobre el mapa de tu zona.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="border border-border-soft p-8 rounded-sm bg-white shadow-sm hover:shadow-md transition-shadow">
+          <p class="text-sm font-mono text-accent mb-2 uppercase font-bold tracking-wide">EL DOLOR</p>
+          <h3 class="text-xl font-bold mb-4">"Tengo que cobrar y me enredo entre plataformas"</h3>
+          <div class="h-px w-full bg-border-soft mb-6"></div>
+          <p class="text-sm font-mono text-brand-blue mb-2 uppercase font-bold tracking-wide flex items-center gap-2">
+            <svg class="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            LA SOLUCIÓN
+          </p>
+          <p class="text-text-muted text-lg">Cobro en línea y conciliación automática. Facturación electrónica SII integrada y cortes automáticos, todo en el mismo sistema que gestiona tu red. Alternativa a SmartOLT + sistemas de ventas que no se comunican.</p>
+        </div>
       </div>
-    </footer>
+      
+      <!-- Cifra de Ahorro Destacada -->
+      <div class="mt-12 border-l-4 border-accent bg-bg-secondary p-8 rounded-r-sm max-w-3xl mx-auto text-center">
+        <p class="text-xl text-brand-blue font-bold mb-2">Equipos perdidos o robados = Pérdida directa de capital</p>
+        <p class="text-text-muted">Con nuestra asignación por fecha de caducidad, un ISP promedio que implementa APPsource <strong class="text-accent text-2xl ml-1 block mt-2">AHORRA HASTA $2.500.000 AL AÑO</strong> en reducción de extravío de inventario.</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/main.js" type="module" defer=""></script>
+  <!-- Price Objection / ROI -->
+  <section class="py-20 md:py-32 bg-brand-blue text-white" id="solucion">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight mb-6">
+          No competimos por precio. Competimos por control total.
+        </h2>
+        <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+          Un software barato sale carísimo cuando un equipo se pierde en bodega, cuando te multan por no facturar bien en el SII o cuando el soporte técnico te responde 3 días después.
+        </p>
+        <p class="text-slate-300 text-lg leading-relaxed">
+          APPsource es una inversión en infraestructura para tu negocio. El sistema se paga solo al evitar la pérdida de 2 o 3 ONTs al mes gracias al control riguroso de inventario que te entregamos.
+        </p>
+      </div>
+      <div class="border border-slate-700 bg-slate-800 p-8 rounded-sm">
+        <h3 class="text-xl font-bold uppercase tracking-wider mb-6 text-accent">Lo que obtienes:</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-slate-300 text-lg">Soporte directo local en Chile, no un call center extranjero.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-slate-300 text-lg">Módulo SII integrado: Cumple la normativa sin intermediarios extras.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span class="text-slate-300 text-lg">Portal de pagos para clientes (Webpay) con activación inmediata tras el pago.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <!-- Migration and Closing -->
+  <section class="py-20 md:py-32 bg-bg-primary" id="migracion">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight mb-6 text-brand-blue">
+        Migración Asistida. Cero Riesgo.
+      </h2>
+      <p class="text-text-muted text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Entendemos el miedo a cambiar de sistema y perder datos. Nuestro equipo técnico realiza una evaluación inicial, extrae tus datos desde MicroWISP, Excel u otras plataformas, y los transfiere íntegramente a APPsource de forma transparente. No estarás solo.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a class="bg-accent hover:bg-accent-hover text-white py-4 px-10 rounded-sm shadow-md font-bold uppercase tracking-wide text-lg transition-colors" href="#precios" id="cta-footer">Agenda tu evaluación gratuita</a>
+      </div>
+    </div>
+  </section>
 
-
-  </div>
-
-
-</body></html>
+  <footer class="bg-brand-blue py-10 border-t border-slate-800 text-center text-slate-400 text-sm">
+    <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center gap-2 mb-4 md:mb-0">
+        <img src="img/logo.png" alt="APPsource" class="h-5 grayscale opacity-70">
+        <span class="font-bold tracking-widest text-slate-500 uppercase">APPsource</span>
+      </div>
+      <p>&copy; 2026 APPsource Chile. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

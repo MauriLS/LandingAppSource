@@ -9,17 +9,20 @@ export default {
       colors: {
         /* Primary Backgrounds */
         'bg-primary': '#FFFFFF',
-        'bg-secondary': '#F3F4F6',
+        'bg-secondary': '#F8FAFC', // slate-50
         
         /* Typography & Borders (Monochrome) */
         'text-main': '#0f172a',
-        'text-muted': '#4B5563',
-        'border-soft': '#E5E7EB',
-        'border-hard': '#cbd5e1',
+        'text-muted': '#475569',
+        'border-soft': '#E2E8F0',
+        'border-hard': '#CBD5E1',
         
-        /* Technical Accents */
-        'accent': '#0EA5E9', /* Bright Blue */
-        'accent-hover': '#0284C7', /* Dark Blue */
+        /* Technical Accents (Amber/Gold for CTA and savings) */
+        'accent': '#d97706', /* amber-600 */
+        'accent-hover': '#b45309', /* amber-700 */
+        
+        /* Brand Dark Blue (for UI elements if needed) */
+        'brand-blue': '#1e293b', /* slate-800 */
       },
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
@@ -27,12 +30,6 @@ export default {
       },
       letterSpacing: {
         'tight-tech': '-0.02em',
-      },
-      boxShadow: {
-        /* Neo-brutalist hard shadows */
-        'brutal': '4px 4px 0px 0px #ffffff',
-        'brutal-sm': '2px 2px 0px 0px #ffffff',
-        'brutal-lg': '6px 6px 0px 0px #ffffff',
       },
       scale: {
         '98': '0.98',
