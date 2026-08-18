@@ -245,3 +245,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   }
 
+  // Lógica de Tabs para la sección de Videos de Características
+  const tabBtns = document.querySelectorAll('.feature-tab-btn');
+  const tabContents = document.querySelectorAll('.feature-tab-content');
+
+  if (tabBtns.length > 0 && tabContents.length > 0) {
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remover el estado activo de todos los botones
+        tabBtns.forEach(b => {
+          b.classList.remove('active', 'border-accent', 'bg-bg-secondary');
+          b.classList.add('border-transparent', 'opacity-60');
+        });
+        
+        // Agregar estado activo al botón clickeado
+        btn.classList.add('active', 'border-accent', 'bg-bg-secondary');
+        btn.classList.remove('border-transparent', 'opacity-60');
+
+        // Ocultar todos los contenidos y pausar videos
+        tabContents.forEach(content => {
+          content.classList.remove('block');
+          content.classList.add('hidden');
+          const video = content.querySelector('video');
+          if (video) video.pause();
+        });
+
+        // Mostrar el contenido objetivo
+        const targetId = btn.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+          targetContent.classList.remove('hidden');
+          targetContent.classList.add('block');
+        }
+      });
+    });
+  }

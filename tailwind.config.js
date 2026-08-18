@@ -16,10 +16,11 @@ export default {
         'text-muted': '#475569',
         'border-soft': '#E2E8F0',
         'border-hard': '#CBD5E1',
-        
-        /* Technical Accents (Amber/Gold for CTA and savings) */
-        'accent': '#d97706', /* amber-600 */
-        'accent-hover': '#b45309', /* amber-700 */
+        /* Technical Accents (Teal for positive, Amber for negative) */
+        'accent': '#069494', /* teal-custom */
+        'accent-hover': '#057a7a', /* teal-custom-dark */
+        'warning': '#d97706', /* amber-600 */
+        'warning-hover': '#b45309', /* amber-700 */
         
         /* Brand Dark Blue (for UI elements if needed) */
         'brand-blue': '#1e293b', /* slate-800 */
