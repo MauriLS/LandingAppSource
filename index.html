@@ -29,7 +29,7 @@
       <div class="hidden md:flex items-center gap-6 font-sans font-semibold text-[13px] uppercase text-text-muted">
         <a href="#problema" class="hover:text-accent transition-colors">El Problema</a>
         <a href="#solucion" class="hover:text-accent transition-colors">La Solución</a>
-        <a href="#" class="hover:text-accent transition-colors">Migración Segura</a>
+        <a href="#migracion" class="hover:text-accent transition-colors">Migración Segura</a>
         <a href="#precios" class="hover:text-accent transition-colors">Planes</a>
       </div>
       <div class="flex items-center gap-3">
@@ -192,62 +192,41 @@
           todo ISP en Chile necesita.</p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Feature 1 -->
-        <div class="border border-border-soft p-8 rounded-sm bg-white shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="text-xl font-bold mb-4">"No sé cuántos equipos tengo disponibles"</h3>
-          <div class="h-px w-full bg-border-soft mb-6"></div>
-          <p class="text-sm font-mono text-accent mb-2 uppercase font-bold tracking-wide flex items-center gap-2">
-            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            LA SOLUCIÓN
-          </p>
-          <p class="text-text-muted text-lg">Inventario centralizado y filtros avanzados. Sabrás exactamente dónde está
-            cada ONT o router, ya sea en bodega, asignado a un técnico o instalado en un cliente.</p>
+        <div class="border border-border-soft p-6 rounded-sm bg-white shadow-sm hover:shadow-md transition-all hover:border-accent text-center flex flex-col items-center hover:-translate-y-1">
+          <div class="w-14 h-14 bg-bg-secondary rounded-full flex items-center justify-center mb-4 text-accent">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-brand-blue">Inventario Perdido</h3>
+          <p class="text-sm text-text-muted">Control exacto de equipos en bodega, técnicos o instalados.</p>
         </div>
 
         <!-- Feature 2 -->
-        <div class="border border-border-soft p-8 rounded-sm bg-white shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="text-xl font-bold mb-4">"No sé qué técnico tiene asignado un trabajo"</h3>
-          <div class="h-px w-full bg-border-soft mb-6"></div>
-          <p class="text-sm font-mono text-accent mb-2 uppercase font-bold tracking-wide flex items-center gap-2">
-            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            LA SOLUCIÓN
-          </p>
-          <p class="text-text-muted text-lg">Órdenes de trabajo (OT) con asignación clara y firma digital en terreno.
-            Registra la evidencia gráfica y coordina tu equipo de técnicos al instante.</p>
+        <div class="border border-border-soft p-6 rounded-sm bg-white shadow-sm hover:shadow-md transition-all hover:border-accent text-center flex flex-col items-center hover:-translate-y-1">
+          <div class="w-14 h-14 bg-bg-secondary rounded-full flex items-center justify-center mb-4 text-accent">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-brand-blue">Caos en Terreno</h3>
+          <p class="text-sm text-text-muted">Órdenes digitales para coordinar a tus técnicos en tiempo real.</p>
         </div>
 
         <!-- Feature 3 -->
-        <div class="border border-border-soft p-8 rounded-sm bg-white shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="text-xl font-bold mb-4">"No sé en qué poste debo subirme"</h3>
-          <div class="h-px w-full bg-border-soft mb-6"></div>
-          <p class="text-sm font-mono text-accent mb-2 uppercase font-bold tracking-wide flex items-center gap-2">
-            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            LA SOLUCIÓN
-          </p>
-          <p class="text-text-muted text-lg">Mapa técnico interactivo. Visualiza todas las OLT, NAP, cajas de empalme y
-            su asignación a cada cliente en tiempo real sobre el mapa de tu zona.</p>
+        <div class="border border-border-soft p-6 rounded-sm bg-white shadow-sm hover:shadow-md transition-all hover:border-accent text-center flex flex-col items-center hover:-translate-y-1">
+          <div class="w-14 h-14 bg-bg-secondary rounded-full flex items-center justify-center mb-4 text-accent">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-brand-blue">Falta de Ubicación</h3>
+          <p class="text-sm text-text-muted">Mapa interactivo con OLTs, NAPs y cajas de empalme geolocalizadas.</p>
         </div>
 
         <!-- Feature 4 -->
-        <div class="border border-border-soft p-8 rounded-sm bg-white shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="text-xl font-bold mb-4">"Tengo que cobrar y me enredo entre plataformas"</h3>
-          <div class="h-px w-full bg-border-soft mb-6"></div>
-          <p class="text-sm font-mono text-accent mb-2 uppercase font-bold tracking-wide flex items-center gap-2">
-            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            LA SOLUCIÓN
-          </p>
-          <p class="text-text-muted text-lg">Cobro en línea y conciliación automática. Facturación electrónica SII
-            integrada y cortes automáticos, todo en el mismo sistema que gestiona tu red. Alternativa a SmartOLT +
-            sistemas de ventas que no se comunican.</p>
+        <div class="border border-border-soft p-6 rounded-sm bg-white shadow-sm hover:shadow-md transition-all hover:border-accent text-center flex flex-col items-center hover:-translate-y-1">
+          <div class="w-14 h-14 bg-bg-secondary rounded-full flex items-center justify-center mb-4 text-accent">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-brand-blue">Cobranza Manual</h3>
+          <p class="text-sm text-text-muted">Facturación SII, cortes automáticos y cobro en línea integrado.</p>
         </div>
       </div>
 
@@ -258,6 +237,18 @@
           APPsource <strong class="text-accent text-2xl ml-1 block mt-2">AHORRA HASTA $2.500.000 AL AÑO</strong> en
           reducción de extravío de inventario.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Separator Banner -->
+  <section class="py-12 md:py-16 bg-brand-blue text-white text-center" id="solucion">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <h2 class="font-sans font-black text-2xl md:text-3xl tracking-tight-tech uppercase leading-tight mb-4">
+        De ISP a ISP: Conocemos a fondo tu negocio
+      </h2>
+      <p class="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed">
+        No somos solo desarrolladores, somos operadores. Entendemos de primera mano las dificultades reales de la operación porque hemos escalado un negocio ISP desde cero.
+      </p>
     </div>
   </section>
 
@@ -299,6 +290,14 @@
             <h3 class="font-bold text-lg mb-1">3. Facturación SII</h3>
             <p class="text-sm text-text-muted leading-relaxed">Cobros, cortes automáticos y conciliación sin
               intermediarios extras.</p>
+          </button>
+          <!-- Botón 4 -->
+          <button
+            class="feature-tab-btn text-left p-5 border-l-4 border-transparent hover:bg-bg-secondary transition-colors rounded-r-sm w-full opacity-60 hover:opacity-100"
+            data-target="video-4">
+            <h3 class="font-bold text-lg mb-1">4. Gestión de Clientes</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Historial de servicio, detalle técnico y equipos
+              asignados.</p>
           </button>
         </div>
 
@@ -349,58 +348,175 @@
             <p class="text-text-muted text-lg leading-relaxed">Olvídate de la conciliación manual. Tus clientes pagan a
               través del portal y el sistema automáticamente genera la boleta SII y rehabilita el servicio.</p>
           </div>
+
+          <!-- Contenido 4 -->
+          <div id="video-4" class="feature-tab-content hidden animate-pm-fade-in">
+            <div
+              class="relative w-full aspect-video rounded-sm overflow-hidden shadow-xl border border-border-soft bg-bg-secondary mb-6">
+              <video class="w-full h-full object-cover" controls
+                poster="https://placehold.co/1280x720/1e293b/ffffff?text=Video+Clientes">
+                <source src="" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+              </video>
+            </div>
+            <h4 class="text-2xl font-bold mb-3 text-accent">Visión 360° del Cliente</h4>
+            <p class="text-text-muted text-lg leading-relaxed">Accede al instante a todo el expediente de tu abonado.
+              Revisa su historial de servicio, el detalle de sus planes y los equipos específicos (ONT/router) que
+              utiliza. Garantiza una atención al cliente rápida y sin fricciones teniendo toda la información vital en
+              una sola pantalla.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Price Objection / ROI -->
-  <section class="py-20 md:py-32 bg-brand-blue text-white" id="solucion">
+  <!-- Soporte Humano -->
+  <section class="py-20 md:py-32 bg-bg-primary text-brand-blue" id="soporte">
     <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight mb-6">
-          De ISP a ISP: Conocemos a fondo tu negocio
-        </h2>
-        <p class="text-slate-300 text-lg mb-6 leading-relaxed">
-          Entendemos de primera mano las dificultades y problemas reales de la operación. <span
-            class="bg-accent text-white px-1.5 py-0.5 rounded-sm font-semibold shadow-sm">Contamos con la experiencia de
-            haber creado y escalado un negocio ISP de 0 a 100</span>, tanto en el trabajo de terreno como a nivel de
-          sistemas.
-        </p>
-        <p class="text-slate-300 text-lg leading-relaxed">
-          <span class="bg-accent text-white px-1.5 py-0.5 rounded-sm font-semibold shadow-sm">No somos solo
-            desarrolladores, somos operadores.</span> Sabemos exactamente qué herramientas y procesos necesitas para
-          <span class="bg-accent text-white px-1.5 py-0.5 rounded-sm font-semibold shadow-sm">hacer crecer tu negocio
-            sin perder el control</span> de tus activos ni de tu facturación.
-        </p>
+      <!-- Image/Card (Left) -->
+      <div class="relative w-full max-w-md mx-auto md:max-w-none">
+        <div
+          class="absolute inset-0 bg-accent transform translate-x-3 translate-y-3 md:translate-x-4 md:translate-y-4 rounded-sm -z-10">
+        </div>
+        <img src="img/soporte-humano.png" alt="Equipo de soporte eficiente"
+          class="w-full h-auto rounded-sm border border-border-soft shadow-lg object-cover">
+
+        <!-- Badge -->
+        <div
+          class="absolute -bottom-6 -left-2 md:-left-6 bg-brand-blue text-white p-4 rounded-sm shadow-xl flex items-center gap-3">
+          <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <div>
+            <p class="font-bold text-lg leading-tight">Respuesta Rápida</p>
+            <p class="text-xs text-slate-300">Sin bots, sin esperas</p>
+          </div>
+        </div>
       </div>
-      <div class="border border-slate-700 bg-slate-800 p-8 rounded-sm">
-        <h3 class="text-xl font-bold uppercase tracking-wider mb-6 text-accent">Lo que obtienes:</h3>
+
+      <!-- Text (Right) -->
+      <div class="md:pl-8 mt-12 md:mt-0">
+        <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight mb-6">
+          Soporte 100% <span class="text-accent">Humano</span> y Local
+        </h2>
+        <p class="text-text-muted text-lg leading-relaxed mb-6">
+          <strong class="text-brand-blue">Olvídate de perder el tiempo peleando con respuestas automáticas y
+            BOTS</strong>.
+        </p>
+        <p class="text-text-muted text-lg leading-relaxed mb-8">
+          En APPsource, <strong class="text-brand-blue">siempre hablas con un residente nacional</strong>.
+          Nuestro equipo conoce de primera mano la realidad técnica de los ISP en Chile y entiende al instante el estado
+          de tu negocio, brindándote una solución eficiente para que tu operación jamás se detenga.
+        </p>
         <ul class="space-y-4">
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span class="text-slate-300 text-lg">Asesoría real para tu empresa, no solo la simple implementación del
-              sistema.</span>
+          <li class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-border-soft shrink-0 shadow-sm">
+              <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span class="text-brand-blue font-semibold">Atención directa, rápida y personalizada</span>
           </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span class="text-slate-300 text-lg">Soporte directo local en Chile, no un call center extranjero.</span>
+          <li class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-border-soft shrink-0 shadow-sm">
+              <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span class="text-brand-blue font-semibold">Resolución eficiente de incidentes técnicos</span>
           </li>
-          <li class="flex items-start gap-3">
-            <svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span class="text-slate-300 text-lg">Conocimiento experto del mercado chileno y procesos legales para
-              blindar tu negocio.</span>
+          <li class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-border-soft shrink-0 shadow-sm">
+              <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span class="text-brand-blue font-semibold">Conocimiento experto del mercado local</span>
           </li>
         </ul>
       </div>
     </div>
   </section>
+
+  <!-- Migración Segura -->
+  <section class="py-20 md:py-32 bg-white text-brand-blue" id="migracion">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Video (Left) -->
+      <div class="w-full">
+        <h3 class="text-xl font-bold text-brand-blue mb-4 text-center md:text-left">
+          Proceso de migración segura a APPsource
+        </h3>
+        <div class="w-full relative">
+          <div
+            class="absolute inset-0 bg-brand-blue transform -translate-x-3 -translate-y-3 md:-translate-x-4 md:-translate-y-4 rounded-sm -z-10">
+          </div>
+          <div
+            class="relative w-full aspect-video bg-slate-900 rounded-sm overflow-hidden shadow-xl border border-border-soft flex items-center justify-center group cursor-pointer">
+          <svg
+            class="w-16 h-16 text-white opacity-80 group-hover:scale-110 group-hover:text-accent transition-all duration-300"
+            fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          <span
+            class="absolute bottom-6 text-sm font-bold text-slate-300 uppercase tracking-widest px-4 text-center">Video
+            de Migración Segura (Reproducir)</span>
+          <!-- Ejemplo de video real: -->
+          <!-- <video src="tu_video_migracion.mp4" controls class="absolute inset-0 w-full h-full object-cover"></video> -->
+        </div>
+      </div>
+      </div>
+
+      <!-- Text (Right) -->
+      <div class="md:pl-8 mt-12 md:mt-0">
+        <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight mb-6">
+          Tus datos están <span class="text-accent">100% Seguros</span> con Nosotros
+        </h2>
+        <p class="text-text-muted text-lg leading-relaxed mb-6">
+          Sabemos que cambiar de plataforma da miedo. Por eso, hemos diseñado un proceso de <strong>Migración
+            Segura</strong> que garantiza que no pierdas ni un solo byte de información en la transición.
+        </p>
+        <p class="text-text-muted text-lg leading-relaxed mb-8">
+          Mira el video para descubrir cómo nuestro equipo técnico se encarga de transferir de forma impecable <strong
+            class="text-brand-blue">todos tus clientes, planes, facturas y boletas</strong> desde tu sistema anterior
+          hacia APPsource, sin que tengas que mover un dedo.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-bg-secondary flex items-center justify-center border border-border-soft shrink-0 shadow-sm">
+              <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span class="text-brand-blue font-semibold">Migración completa sin interrumpir tu servicio actual</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-bg-secondary flex items-center justify-center border border-border-soft shrink-0 shadow-sm">
+              <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span class="text-brand-blue font-semibold">Respaldo íntegro de clientes e historial de pagos (SII)</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-bg-secondary flex items-center justify-center border border-border-soft shrink-0 shadow-sm">
+              <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span class="text-brand-blue font-semibold">Privacidad absoluta y protección de tu información</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- Precios / Proceso -->
   <section class="py-20 md:py-32 bg-white text-brand-blue" id="precios">
     <div class="max-w-[1200px] mx-auto px-6">
@@ -417,9 +533,9 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Card 1 -->
         <div
-          class="border-2 border-border-soft rounded-sm p-8 flex flex-col relative bg-bg-secondary hover:border-accent transition-colors shadow-sm">
+          class="border border-border-soft rounded-sm p-8 flex flex-col relative bg-white shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
           <div
-            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full">
+            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full">
             Paso 1
           </div>
           <h3 class="text-2xl font-black uppercase tracking-tight-tech mb-4 text-center mt-2">Asesoría Gratuita</h3>
@@ -450,7 +566,7 @@
 
         <!-- Card 2 -->
         <div
-          class="border-2 border-accent rounded-sm p-8 flex flex-col relative bg-white shadow-xl transform md:-translate-y-4">
+          class="border border-border-soft rounded-sm p-8 flex flex-col relative bg-white shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
           <div
             class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full">
             Paso 2
@@ -484,23 +600,23 @@
 
         <!-- Card 3 -->
         <div
-          class="border-2 border-border-soft rounded-sm p-8 flex flex-col relative bg-bg-secondary hover:border-accent transition-colors shadow-sm">
+          class="border border-border-soft rounded-sm p-8 flex flex-col relative bg-white shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300">
           <div
-            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full">
+            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full">
             Paso 3
           </div>
           <h3 class="text-2xl font-black uppercase tracking-tight-tech mb-4 text-center mt-2">Mensualidad & Soporte</h3>
           <div class="h-px w-full bg-border-soft mb-6"></div>
           <p class="text-text-muted mb-6 flex-grow leading-relaxed">
             Una tarifa predecible que garantiza que tu sistema nunca se detenga. Asegura el funcionamiento continuo de
-            tu ISP respaldado por expertos que reaccionan de inmediato a tus solicitudes.
+            tu ISP respaldado por <strong>expertos que reaccionan de inmediato a tus solicitudes.</strong>
           </p>
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
               </svg>
-              <span class="text-sm font-semibold text-brand-blue">Uso ilimitado de APPsource</span>
+              <span class="text-sm font-semibold text-brand-blue">Módulos adaptados a la escala de tu ISP</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -518,7 +634,7 @@
       </div>
 
       <div class="mt-16 text-center">
-        <a class="inline-flex items-center justify-center gap-2 font-sans font-bold text-[14px] text-white bg-warning hover:bg-warning-hover py-4 px-10 rounded-sm shadow-md transition-colors uppercase tracking-wide"
+        <a class="inline-flex items-center justify-center gap-2 font-sans font-bold text-[14px] text-white bg-accent hover:bg-accent-hover py-4 px-10 rounded-sm shadow-md transition-colors uppercase tracking-wide"
           href="#" id="waFinalBtn">
           Solicitar Mi Asesoría Gratuita Hoy
         </a>
@@ -530,71 +646,107 @@
   <section class="py-20 md:py-32 bg-bg-primary border-t border-border-hard" id="casos-de-exito">
     <div class="max-w-[1200px] mx-auto px-6">
       <div class="mb-16 text-center max-w-4xl mx-auto">
-        <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight mb-4 text-brand-blue">
+        <h2
+          class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight mb-4 text-brand-blue">
           Casos de Éxito y Testimonios
         </h2>
         <p class="text-text-muted text-lg">
-          Conoce cómo otros ISPs han transformado su gestión, escalado sus operaciones y mejorado su facturación gracias a APPsource.
+          Conoce cómo otros ISPs han transformado su gestión, escalado sus operaciones y mejorado su facturación gracias
+          a APPsource.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Card 1 -->
-        <div class="border-2 border-border-soft rounded-sm p-6 flex flex-col items-center bg-white hover:border-accent transition-colors shadow-xl">
-          <div class="w-full aspect-[9/16] bg-slate-800 rounded-sm mb-6 relative overflow-hidden flex flex-col items-center justify-center group cursor-pointer">
-            <svg class="w-16 h-16 text-white opacity-80 group-hover:scale-110 group-hover:text-accent transition-all duration-300" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
+        <div
+          class="border-2 border-border-soft rounded-sm p-6 flex flex-col items-center bg-white hover:border-accent transition-colors shadow-xl">
+          <div
+            class="w-full aspect-[9/16] bg-slate-800 rounded-sm mb-6 relative overflow-hidden flex flex-col items-center justify-center group cursor-pointer">
+            <svg
+              class="w-16 h-16 text-white opacity-80 group-hover:scale-110 group-hover:text-accent transition-all duration-300"
+              fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
             </svg>
-            <span class="absolute bottom-6 text-sm font-bold text-slate-300 uppercase tracking-widest px-4 text-center">Video Testimonio (9:16)</span>
+            <span
+              class="absolute bottom-6 text-sm font-bold text-slate-300 uppercase tracking-widest px-4 text-center">Video
+              Testimonio (9:16)</span>
             <!-- Aquí el usuario puede reemplazar por el tag video: -->
             <!-- <video src="tu_video.mp4" controls class="absolute inset-0 w-full h-full object-cover"></video> -->
           </div>
           <img src="img/logoemp/MegaFiber.webp" alt="MegaFiber" class="h-10 object-contain mb-4">
           <h3 class="text-xl font-black uppercase tracking-tight-tech mb-1 text-center text-brand-blue">MegaFiber</h3>
-          <a href="#" target="_blank" class="text-accent hover:text-accent-hover text-sm font-semibold uppercase tracking-wider mb-4 flex items-center gap-1 transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          <a href="#" target="_blank"
+            class="text-accent hover:text-accent-hover text-sm font-semibold uppercase tracking-wider mb-4 flex items-center gap-1 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
             megafiber.cl
           </a>
           <p class="text-text-muted text-sm text-center leading-relaxed italic">
-            "APPsource ordenó por completo nuestra facturación y los cortes automáticos. Pasamos de perder equipos a tener control total."
+            "APPsource ordenó por completo nuestra facturación y los cortes automáticos. Pasamos de perder equipos a
+            tener control total."
           </p>
         </div>
 
         <!-- Card 2 -->
-        <div class="border-2 border-border-soft rounded-sm p-6 flex flex-col items-center bg-white hover:border-accent transition-colors shadow-xl">
-          <div class="w-full aspect-[9/16] bg-slate-800 rounded-sm mb-6 relative overflow-hidden flex flex-col items-center justify-center group cursor-pointer">
-            <svg class="w-16 h-16 text-white opacity-80 group-hover:scale-110 group-hover:text-accent transition-all duration-300" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
+        <div
+          class="border-2 border-border-soft rounded-sm p-6 flex flex-col items-center bg-white hover:border-accent transition-colors shadow-xl">
+          <div
+            class="w-full aspect-[9/16] bg-slate-800 rounded-sm mb-6 relative overflow-hidden flex flex-col items-center justify-center group cursor-pointer">
+            <svg
+              class="w-16 h-16 text-white opacity-80 group-hover:scale-110 group-hover:text-accent transition-all duration-300"
+              fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
             </svg>
-            <span class="absolute bottom-6 text-sm font-bold text-slate-300 uppercase tracking-widest px-4 text-center">Video Testimonio (9:16)</span>
+            <span
+              class="absolute bottom-6 text-sm font-bold text-slate-300 uppercase tracking-widest px-4 text-center">Video
+              Testimonio (9:16)</span>
           </div>
           <img src="img/logoemp/capitalfiber.webp" alt="Capital Fiber" class="h-10 object-contain mb-4">
-          <h3 class="text-xl font-black uppercase tracking-tight-tech mb-1 text-center text-brand-blue">Capital Fiber</h3>
-          <a href="#" target="_blank" class="text-accent hover:text-accent-hover text-sm font-semibold uppercase tracking-wider mb-4 flex items-center gap-1 transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          <h3 class="text-xl font-black uppercase tracking-tight-tech mb-1 text-center text-brand-blue">Capital Fiber
+          </h3>
+          <a href="#" target="_blank"
+            class="text-accent hover:text-accent-hover text-sm font-semibold uppercase tracking-wider mb-4 flex items-center gap-1 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
             capitalfiber.cl
           </a>
           <p class="text-text-muted text-sm text-center leading-relaxed italic">
-            "La migración fue transparente y sin pérdida de datos. La atención del equipo en Chile es lo que más destaco, siempre están ahí."
+            "La migración fue transparente y sin pérdida de datos. La atención del equipo en Chile es lo que más
+            destaco, siempre están ahí."
           </p>
         </div>
 
         <!-- Card 3 -->
-        <div class="border-2 border-border-soft rounded-sm p-6 flex flex-col items-center bg-white hover:border-accent transition-colors shadow-xl">
-          <div class="w-full aspect-[9/16] bg-slate-800 rounded-sm mb-6 relative overflow-hidden flex flex-col items-center justify-center group cursor-pointer">
-            <svg class="w-16 h-16 text-white opacity-80 group-hover:scale-110 group-hover:text-accent transition-all duration-300" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
+        <div
+          class="border-2 border-border-soft rounded-sm p-6 flex flex-col items-center bg-white hover:border-accent transition-colors shadow-xl">
+          <div
+            class="w-full aspect-[9/16] bg-slate-800 rounded-sm mb-6 relative overflow-hidden flex flex-col items-center justify-center group cursor-pointer">
+            <svg
+              class="w-16 h-16 text-white opacity-80 group-hover:scale-110 group-hover:text-accent transition-all duration-300"
+              fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
             </svg>
-            <span class="absolute bottom-6 text-sm font-bold text-slate-300 uppercase tracking-widest px-4 text-center">Video Testimonio (9:16)</span>
+            <span
+              class="absolute bottom-6 text-sm font-bold text-slate-300 uppercase tracking-widest px-4 text-center">Video
+              Testimonio (9:16)</span>
           </div>
           <img src="img/logoemp/logo_interplay.webp" alt="Interplay" class="h-10 object-contain mb-4">
           <h3 class="text-xl font-black uppercase tracking-tight-tech mb-1 text-center text-brand-blue">Interplay</h3>
-          <a href="#" target="_blank" class="text-accent hover:text-accent-hover text-sm font-semibold uppercase tracking-wider mb-4 flex items-center gap-1 transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          <a href="#" target="_blank"
+            class="text-accent hover:text-accent-hover text-sm font-semibold uppercase tracking-wider mb-4 flex items-center gap-1 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
             interplay.cl
           </a>
           <p class="text-text-muted text-sm text-center leading-relaxed italic">
-            "Hemos logrado escalar nuestra red de manera segura gracias al soporte técnico constante. Es la tranquilidad que buscábamos."
+            "Hemos logrado escalar nuestra red de manera segura gracias al soporte técnico constante. Es la tranquilidad
+            que buscábamos."
           </p>
         </div>
 
@@ -607,11 +759,13 @@
           Más ISPs que confían en nosotros
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          
+
           <!-- Card 1 -->
-          <div class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
+          <div
+            class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
             <div class="flex items-center gap-4 mb-3 border-b border-border-soft pb-3">
-              <img src="img/logoemp/caps2.webp" alt="Caps2" class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
+              <img src="img/logoemp/caps2.webp" alt="Caps2"
+                class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
               <div>
                 <h4 class="font-bold text-brand-blue uppercase tracking-wide text-sm">Caps2</h4>
                 <p class="text-[10px] text-text-muted uppercase tracking-widest font-semibold">ISP Crecimiento</p>
@@ -623,9 +777,11 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
+          <div
+            class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
             <div class="flex items-center gap-4 mb-3 border-b border-border-soft pb-3">
-              <img src="img/logoemp/redlitoral.webp" alt="Red Litoral" class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
+              <img src="img/logoemp/redlitoral.webp" alt="Red Litoral"
+                class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
               <div>
                 <h4 class="font-bold text-brand-blue uppercase tracking-wide text-sm">Red Litoral</h4>
                 <p class="text-[10px] text-text-muted uppercase tracking-widest font-semibold">Operador Regional</p>
@@ -637,9 +793,11 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
+          <div
+            class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
             <div class="flex items-center gap-4 mb-3 border-b border-border-soft pb-3">
-              <img src="img/logoemp/wiiner.webp" alt="Wiiner" class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
+              <img src="img/logoemp/wiiner.webp" alt="Wiiner"
+                class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
               <div>
                 <h4 class="font-bold text-brand-blue uppercase tracking-wide text-sm">Wiiner</h4>
                 <p class="text-[10px] text-text-muted uppercase tracking-widest font-semibold">WISP Rural</p>
@@ -651,9 +809,11 @@
           </div>
 
           <!-- Card 4 -->
-          <div class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
+          <div
+            class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
             <div class="flex items-center gap-4 mb-3 border-b border-border-soft pb-3">
-              <img src="img/logoemp/dkmnet.webp" alt="DKM Net" class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
+              <img src="img/logoemp/dkmnet.webp" alt="DKM Net"
+                class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
               <div>
                 <h4 class="font-bold text-brand-blue uppercase tracking-wide text-sm">DKM Net</h4>
                 <p class="text-[10px] text-text-muted uppercase tracking-widest font-semibold">Proveedor Fibra</p>
@@ -665,9 +825,11 @@
           </div>
 
           <!-- Card 5 -->
-          <div class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
+          <div
+            class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
             <div class="flex items-center gap-4 mb-3 border-b border-border-soft pb-3">
-              <img src="img/logoemp/fulltv.webp" alt="Full TV" class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
+              <img src="img/logoemp/fulltv.webp" alt="Full TV"
+                class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
               <div>
                 <h4 class="font-bold text-brand-blue uppercase tracking-wide text-sm">Full TV</h4>
                 <p class="text-[10px] text-text-muted uppercase tracking-widest font-semibold">TV & Internet</p>
@@ -679,9 +841,11 @@
           </div>
 
           <!-- Card 6 -->
-          <div class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
+          <div
+            class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
             <div class="flex items-center gap-4 mb-3 border-b border-border-soft pb-3">
-              <img src="img/logoemp/homynet.webp" alt="Homy Net" class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
+              <img src="img/logoemp/homynet.webp" alt="Homy Net"
+                class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
               <div>
                 <h4 class="font-bold text-brand-blue uppercase tracking-wide text-sm">Homy Net</h4>
                 <p class="text-[10px] text-text-muted uppercase tracking-widest font-semibold">ISP Urbano</p>
@@ -693,9 +857,11 @@
           </div>
 
           <!-- Card 7 -->
-          <div class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
+          <div
+            class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
             <div class="flex items-center gap-4 mb-3 border-b border-border-soft pb-3">
-              <img src="img/logoemp/logo_netwild.webp" alt="Netwild" class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
+              <img src="img/logoemp/logo_netwild.webp" alt="Netwild"
+                class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
               <div>
                 <h4 class="font-bold text-brand-blue uppercase tracking-wide text-sm">Netwild</h4>
                 <p class="text-[10px] text-text-muted uppercase tracking-widest font-semibold">Conectividad Total</p>
@@ -707,9 +873,11 @@
           </div>
 
           <!-- Card 8 -->
-          <div class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
+          <div
+            class="border border-border-hard rounded-sm p-5 flex flex-col bg-white hover:shadow-lg transition-shadow shadow-sm hover:border-accent">
             <div class="flex items-center gap-4 mb-3 border-b border-border-soft pb-3">
-              <img src="img/logoemp/intercable.webp" alt="Intercable" class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
+              <img src="img/logoemp/intercable.webp" alt="Intercable"
+                class="h-12 w-12 object-contain bg-bg-secondary p-1 rounded-sm border border-border-soft">
               <div>
                 <h4 class="font-bold text-brand-blue uppercase tracking-wide text-sm">Intercable</h4>
                 <p class="text-[10px] text-text-muted uppercase tracking-widest font-semibold">Red y TV</p>

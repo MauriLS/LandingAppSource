@@ -29,7 +29,7 @@ El error más común en este tipo de landing es empezar describiendo el sistema 
    - "Tengo que pagar pero me enredo entre tantas plataformas" → Cobro en línea + conciliación automática + portal del cliente, todo en un sistema.
    - Equipos perdidos/robados → asignación con fecha de caducidad, con la cifra de ahorro anual como cierre de esta sección (acá va el color de acento).
 
-4. **Objeción de precio, tratada de frente, no escondida:** "no competimos por precio, competimos por soporte y un sistema que trabaja por ti" ya es una buena base — hay que respaldarla con el ROI del ahorro en equipos, para que el precio se justifique con un número, no con una afirmación.
+4. **Objeción de precio, tratada de frente, no escondida:** "no competimos por precio, competimos por soporte y un sistema que trabaja por ti" ya es una buena base — hay que respaldarla con el ROI del ahorro en equipos, para que el precio se justifique con un número, no con una afirmación. Además, **el uso de APPsource es modular y adaptado al cliente**: según la capacidad y el tamaño del negocio ISP, se negocia qué y cuántos módulos utilizará la empresa para escalar eficientemente.
 
 5. **Cierre con la migración como no-riesgo:** "migración asistida, no pierdes tus datos" — resuelve el último miedo antes del CTA final.
 
