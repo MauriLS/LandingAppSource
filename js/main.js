@@ -280,3 +280,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     });
   }
+
+  // Lógica de Typewriter (Efecto de escribir y borrar en el Hero)
+  const framerText = document.getElementById('framer-text');
+  if (framerText) {
+    const words = ['facturas', 'OLTs', 'ONTs', 'mufas', 'cajas NAP'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    // Asegurarnos que no tenga transiciones CSS residuales del efecto anterior
+    framerText.style.transition = 'none';
+    framerText.style.opacity = 1;
+    framerText.style.transform = 'none';
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      
+      if (isDeleting) {
+        framerText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        framerText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        // Pausa al terminar de escribir la palabra completa
+        typeSpeed = 1500;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        // Pausa breve antes de escribir la siguiente palabra
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 400;
+      }
+
+      setTimeout(typeEffect, typeSpeed);
+    }
+
+    // Limpiar contenido inicial e iniciar
+    framerText.textContent = '';
+    typeEffect();
+  }

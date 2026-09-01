@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deja de perder equipos y clientes por gestión manual | APPsource</title>
+  <title>Deja de perder equipos y clientes por gestión manual | AquilaRed</title>
   <meta name="description"
     content="Software de gestión ERP para ISP en Chile. Alternativa a MicroWISP y SmartOLT con facturación electrónica SII, control de inventario y soporte técnico local.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -22,9 +22,9 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        <img src="img/logo.png" alt="APPsource" class="h-6 w-auto object-contain">
-        <a href="#top"
-          class="font-sans font-bold tracking-widest text-[14px] text-brand-blue no-underline hidden lg:block">APPSOURCE</a>
+        <a href="#top" class="inline-block transition-transform hover:scale-105">
+          <img src="img/aquilared-logo.png" alt="AquilaRed" class="h-10 md:h-12 w-auto object-contain">
+        </a>
       </div>
       <div class="hidden md:flex items-center gap-6 font-sans font-semibold text-[13px] uppercase text-text-muted">
         <a href="#problema" class="hover:text-accent transition-colors">El Problema</a>
@@ -40,38 +40,29 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="py-20 md:py-32 bg-brand-blue text-white" id="top">
-    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
-      <div class="z-10">
-        <h1 class="font-sans font-black leading-[1.1] text-4xl md:text-5xl lg:text-6xl tracking-tight-tech uppercase">
-          ¿Sabes cuántos equipos tienes <span class="text-warning">disponibles ahora mismo?</span>
-        </h1>
-        <p class="text-slate-300 text-lg md:text-xl mt-6 max-w-[50ch] leading-relaxed">
-          Deja de perder dinero en equipos que no sabes dónde están. Controla tu inventario, clientes, técnicos y
-          cobranza en un solo lugar, no en diez plataformas desconectadas.
-        </p>
-        <div class="mt-10 flex flex-col sm:flex-row gap-4 font-sans font-semibold">
-          <a class="bg-warning hover:bg-warning-hover text-white py-4 px-8 rounded-sm shadow-md text-center text-lg transition-colors uppercase tracking-wide"
-            href="#precios">Ver cómo funciona</a>
-          <a class="border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white py-4 px-8 rounded-sm text-center text-lg transition-colors uppercase tracking-wide"
-            href="#problema">Descubrir más</a>
-        </div>
-      </div>
-      <div class="relative z-10 w-full rounded-sm border border-slate-700 bg-slate-900 overflow-hidden shadow-2xl">
-        <div class="border-b border-slate-700 px-4 py-3 flex items-center justify-between bg-slate-800">
-          <div class="flex gap-2">
-            <div class="w-3 h-3 rounded-full bg-slate-600"></div>
-            <div class="w-3 h-3 rounded-full bg-slate-600"></div>
-            <div class="w-3 h-3 rounded-full bg-slate-600"></div>
-          </div>
-          <div class="font-mono text-[11px] text-slate-400">ID: DASHBOARD_APP</div>
-        </div>
-        <div class="relative w-full aspect-video bg-black overflow-hidden">
-          <iframe class="w-full h-full" loading="lazy" src="https://www.youtube.com/embed/vtrigPEfQ_I?start=10"
-            title="APPsource Dashboard" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen=""></iframe>
-        </div>
+  <header class="relative py-24 md:py-40 flex items-center justify-center overflow-hidden bg-brand-blue" id="top">
+    <!-- Parallax Background Image (Black & White silhouette) -->
+    <div class="absolute inset-0 z-0" 
+         style="background-image: url('img/heroimg.jfif'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; filter: grayscale(100%) contrast(150%) brightness(30%); opacity: 0.35; mix-blend-mode: luminosity;">
+    </div>
+
+    <!-- Gradient Overlay for better readability and blending -->
+    <div class="absolute inset-0 z-10 bg-gradient-to-b from-brand-blue/90 via-brand-blue/60 to-brand-blue/95 pointer-events-none"></div>
+
+    <!-- Content -->
+    <div class="relative z-20 max-w-[1000px] mx-auto px-6 flex flex-col items-center text-center text-white">
+      <h1 class="font-sans font-black leading-[1.1] text-4xl md:text-5xl lg:text-7xl tracking-tight-tech uppercase drop-shadow-md">
+        ¿Sabes cuántas <span id="framer-text" class="text-warning inline-block min-w-[200px] lg:min-w-[300px] after:content-['|'] after:animate-blink after:ml-1">facturas</span><br> tienes perdidas?
+      </h1>
+      <p class="text-slate-300 text-lg md:text-2xl mt-8 max-w-[65ch] leading-relaxed drop-shadow-sm">
+        Deja de perder dinero en equipos que no sabes dónde están. Controla tu inventario, clientes, técnicos y
+        cobranza en un solo lugar, no en diez plataformas desconectadas.
+      </p>
+      <div class="mt-12 flex flex-col sm:flex-row gap-6 font-sans font-semibold">
+        <a class="bg-warning hover:bg-warning-hover text-brand-blue py-4 px-10 rounded-sm shadow-xl text-center text-xl transition-all uppercase tracking-wide hover:-translate-y-1"
+          href="#precios">Ver cómo funciona</a>
+        <a class="border border-slate-500 hover:border-slate-300 text-slate-200 hover:text-white py-4 px-10 rounded-sm text-center text-xl transition-all uppercase tracking-wide hover:-translate-y-1 bg-brand-blue/40 backdrop-blur-sm"
+          href="#problema">Descubrir más</a>
       </div>
     </div>
   </header>
@@ -92,7 +83,7 @@
         <div
           class="flex flex-col items-center text-left max-w-sm mx-auto border-t md:border-t-0 border-border-hard pt-8 md:pt-0">
           <p class="text-sm text-text-main italic">"Migramos a otra plataforma por probar... a los 6 meses volvimos
-            porque los equipos se perdían y la facturación era un caos. Con APPsource la tranquilidad es real."</p>
+            porque los equipos se perdían y la facturación era un caos. Con AquilaRed la tranquilidad es real."</p>
           <span class="text-xs font-bold text-accent mt-3 uppercase tracking-widest">— Proveedor WISP Zona Sur</span>
         </div>
       </div>
@@ -234,7 +225,7 @@
       <div class="mt-12 border-l-4 border-accent bg-bg-secondary p-8 rounded-r-sm max-w-3xl mx-auto text-center">
         <p class="text-xl text-brand-blue font-bold mb-2">Equipos perdidos o robados = Pérdida directa de capital</p>
         <p class="text-text-muted">Con nuestra asignación por fecha de caducidad, un ISP promedio que implementa
-          APPsource <strong class="text-accent text-2xl ml-1 block mt-2">AHORRA HASTA $2.500.000 AL AÑO</strong> en
+          AquilaRed <strong class="text-accent text-2xl ml-1 block mt-2">AHORRA HASTA $2.500.000 AL AÑO</strong> en
           reducción de extravío de inventario.</p>
       </div>
     </div>
@@ -245,7 +236,7 @@
     <div class="max-w-[1200px] mx-auto px-6">
       <div class="mb-16 text-center max-w-4xl mx-auto">
         <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight">
-          Lleva tu negocio a otro nivel, con los mapas interactivos que solo tiene appSOurse
+          Lleva tu negocio a otro nivel, con los mapas interactivos que solo tiene AquilaRed
         </h2>
         <p class="text-text-muted mt-4 text-lg">
           Encuentra tus clientes, los naps asignados, los equipos perdidos, ve donde estan los tecnicos en tiempo real y planifica un nuevo sector con nuestros mapas intectacitvos.
@@ -297,14 +288,21 @@
   </section>
 
   <!-- Separator Banner -->
-  <section class="py-12 md:py-16 bg-brand-blue text-white text-center" id="solucion">
-    <div class="max-w-[1200px] mx-auto px-6">
-      <h2 class="font-sans font-black text-2xl md:text-3xl tracking-tight-tech uppercase leading-tight mb-4">
-        De ISP a ISP: Conocemos a fondo tu negocio
-      </h2>
-      <p class="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed">
-        No somos solo desarrolladores, somos operadores. Entendemos de primera mano las dificultades reales de la operación porque hemos escalado un negocio ISP desde cero.
-      </p>
+  <section class="py-12 md:py-16 bg-brand-blue text-white" id="solucion">
+    <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+      <!-- Logo -->
+      <div class="shrink-0">
+        <img src="img/aquilaredBlanco.png" alt="AquilaRed" class="max-h-32 md:max-h-40 object-contain opacity-90">
+      </div>
+      <!-- Texto -->
+      <div class="text-center md:text-left max-w-2xl">
+        <h2 class="font-sans font-black text-2xl md:text-3xl tracking-tight-tech uppercase leading-tight mb-4">
+          De ISP a ISP: Conocemos a fondo tu negocio
+        </h2>
+        <p class="text-slate-300 text-lg leading-relaxed">
+          No somos solo desarrolladores, somos operadores. Entendemos de primera mano las dificultades reales de la operación porque hemos escalado un negocio ISP desde cero.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -313,7 +311,7 @@
     <div class="max-w-[1200px] mx-auto px-6">
       <div class="mb-12 text-center max-w-4xl mx-auto">
         <h2 class="font-sans font-black text-3xl md:text-4xl tracking-tight-tech uppercase leading-tight">
-          Descubre el poder de APPsource en acción
+          Descubre el poder de AquilaRed en acción
         </h2>
         <p class="text-text-muted mt-4 text-lg">
           Una vista rápida a las funciones más potentes que transformarán la gestión de tu ISP.
@@ -396,6 +394,17 @@
 
         </div>
       </div>
+
+      <!-- CTA Asesoría -->
+      <div class="mt-16 text-center border-t border-border-soft pt-12">
+        <h3 class="font-sans font-bold text-xl md:text-2xl tracking-tight text-brand-blue mb-6">
+          Conoce todos los módulos en una reunión de asesoría gratuita para tu negocio
+        </h3>
+        <a class="inline-flex items-center justify-center gap-2 font-sans font-bold text-[14px] text-white bg-warning hover:bg-warning-hover py-4 px-10 rounded-sm shadow-md transition-colors uppercase tracking-wide"
+          href="#precios">
+          Agendar Asesoría Gratuita
+        </a>
+      </div>
     </div>
   </section>
 
@@ -434,7 +443,7 @@
             BOTS</strong>.
         </p>
         <p class="text-text-muted text-lg leading-relaxed mb-8">
-          En APPsource, <strong class="text-brand-blue">siempre hablas con un residente nacional</strong>.
+          En AquilaRed, <strong class="text-brand-blue">siempre hablas con un residente nacional</strong>.
           Nuestro equipo conoce de primera mano la realidad técnica de los ISP en Chile y entiende al instante el estado
           de tu negocio, brindándote una solución eficiente para que tu operación jamás se detenga.
         </p>
@@ -477,7 +486,7 @@
       <!-- Video (Left) -->
       <div class="w-full">
         <h3 class="text-xl font-bold text-brand-blue mb-4 text-center md:text-left">
-          Proceso de migración segura a APPsource
+          Proceso de migración segura a AquilaRed
         </h3>
         <div class="w-full relative">
           <div
@@ -511,7 +520,7 @@
         <p class="text-text-muted text-lg leading-relaxed mb-8">
           Mira el video para descubrir cómo nuestro equipo técnico se encarga de transferir de forma impecable <strong
             class="text-brand-blue">todos tus clientes, planes, facturas y boletas</strong> desde tu sistema anterior
-          hacia APPsource, sin que tengas que mover un dedo.
+          hacia AquilaRed, sin que tengas que mover un dedo.
         </p>
         <ul class="space-y-4">
           <li class="flex items-center gap-3">
@@ -555,7 +564,7 @@
         </h2>
         <p class="text-text-muted text-lg">
           Nuestro modelo está diseñado para proteger tu capital y asegurar una
-          transición 100% exitosa a APPsource.
+          transición 100% exitosa a AquilaRed.
         </p>
       </div>
 
@@ -681,7 +690,7 @@
         </h2>
         <p class="text-text-muted text-lg">
           Conoce cómo otros ISPs han transformado su gestión, escalado sus operaciones y mejorado su facturación gracias
-          a APPsource.
+          a AquilaRed.
         </p>
       </div>
 
@@ -713,7 +722,7 @@
             megafiber.cl
           </a>
           <p class="text-text-muted text-sm text-center leading-relaxed italic">
-            "APPsource ordenó por completo nuestra facturación y los cortes automáticos. Pasamos de perder equipos a
+            "AquilaRed ordenó por completo nuestra facturación y los cortes automáticos. Pasamos de perder equipos a
             tener control total."
           </p>
         </div>
@@ -926,10 +935,10 @@
   <footer class="bg-brand-blue py-10 border-t border-slate-800 text-center text-slate-400 text-sm">
     <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
       <div class="flex items-center gap-2 mb-4 md:mb-0">
-        <img src="img/logo.png" alt="APPsource" class="h-5 grayscale opacity-70">
-        <span class="font-bold tracking-widest text-slate-500 uppercase">APPsource</span>
+        <img src="img/logo.png" alt="AquilaRed" class="h-5 grayscale opacity-70">
+        <span class="font-bold tracking-widest text-slate-500 uppercase">AquilaRed</span>
       </div>
-      <p>&copy; 2026 APPsource Chile. Todos los derechos reservados.</p>
+      <p>&copy; 2026 AquilaRed Chile. Todos los derechos reservados.</p>
     </div>
   </footer>
   <script type="module" src="js/main.js"></script>

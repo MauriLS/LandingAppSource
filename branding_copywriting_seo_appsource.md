@@ -1,4 +1,4 @@
-# Branding y Copywriting SEO — Landing APPsource
+# Branding y Copywriting SEO — Landing AquilaRed
 
 ## Colores: cómo transmitir control, seguridad y ahorro
 
@@ -29,7 +29,7 @@ El error más común en este tipo de landing es empezar describiendo el sistema 
    - "Tengo que pagar pero me enredo entre tantas plataformas" → Cobro en línea + conciliación automática + portal del cliente, todo en un sistema.
    - Equipos perdidos/robados → asignación con fecha de caducidad, con la cifra de ahorro anual como cierre de esta sección (acá va el color de acento).
 
-4. **Objeción de precio, tratada de frente, no escondida:** "no competimos por precio, competimos por soporte y un sistema que trabaja por ti" ya es una buena base — hay que respaldarla con el ROI del ahorro en equipos, para que el precio se justifique con un número, no con una afirmación. Además, **el uso de APPsource es modular y adaptado al cliente**: según la capacidad y el tamaño del negocio ISP, se negocia qué y cuántos módulos utilizará la empresa para escalar eficientemente.
+4. **Objeción de precio, tratada de frente, no escondida:** "no competimos por precio, competimos por soporte y un sistema que trabaja por ti" ya es una buena base — hay que respaldarla con el ROI del ahorro en equipos, para que el precio se justifique con un número, no con una afirmación. Además, **el uso de AquilaRed es modular y adaptado al cliente**: según la capacidad y el tamaño del negocio ISP, se negocia qué y cuántos módulos utilizará la empresa para escalar eficientemente.
 
 5. **Cierre con la migración como no-riesgo:** "migración asistida, no pierdes tus datos" — resuelve el último miedo antes del CTA final.
 
@@ -41,6 +41,6 @@ Este nicho es de **volumen bajo pero intención altísima** — nadie busca "sof
 - **Keywords de dolor específico + Chile:** "facturación electrónica SII para proveedores de internet", "sistema de cobranza automática ISP Chile", "software para gestionar OLT y clientes internet", "control de inventario de equipos ISP".
 - **Keywords de categoría:** "ERP para ISP Chile", "sistema de gestión para WISP", "software para proveedores de internet Chile" — menor intención pero necesarias para autoridad temática.
 - **Contenido de soporte (blog/recursos), no solo landing:** un artículo "Cómo migrar de MicroWISP sin perder datos" o "Cuánto le cuesta a un ISP perder equipos al año" atrae tráfico de la fase de consideración y alimenta la landing con enlaces internos — coincide directo con el dolor #1 que ya identificamos.
-- **Meta title/description con el dolor, no con features:** ej. Title: "Deja de perder equipos y clientes por gestión manual | APPsource" — más efectivo en CTR que "Software ERP para ISP".
+- **Meta title/description con el dolor, no con features:** ej. Title: "Deja de perder equipos y clientes por gestión manual | AquilaRed" — más efectivo en CTR que "Software ERP para ISP".
 
 Con esto ya podés armar la landing completa (estructura + copy + SEO on-page). Si querés, en el siguiente paso armo los meta tags y el copy final sección por sección.
