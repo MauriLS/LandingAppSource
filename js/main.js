@@ -284,7 +284,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   // Lógica de Typewriter (Efecto de escribir y borrar en el Hero)
   const framerText = document.getElementById('framer-text');
   if (framerText) {
-    const words = ['facturas', 'OLTs', 'ONTs', 'mufas', 'cajas NAP'];
+    const words = ['Routers', 'Equipos', 'Pagos', 'Técnicos'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

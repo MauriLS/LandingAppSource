@@ -17,10 +17,10 @@ export default {
         'border-soft': '#E2E8F0',
         'border-hard': '#CBD5E1',
         /* Technical Accents (Royal Gold) */
-        'accent': '#FFD700', /* pure gold */
-        'accent-hover': '#DAA520', /* dark goldenrod */
-        'warning': '#FFD700', /* pure gold */
-        'warning-hover': '#DAA520', /* dark goldenrod */
+        'accent': '#C9A227', /* customized gold requested by user */
+        'accent-hover': '#B38E22', /* slightly darker for hover */
+        'warning': '#FFD700', /* pure gold (used in hero) */
+        'warning-hover': '#DAA520', /* dark goldenrod (used in hero hover) */
         
         /* Brand Dark Blue (for UI elements if needed) */
         'brand-blue': '#0A2540', /* premium navy blue */
