@@ -398,11 +398,15 @@
           <div id="video-1" class="feature-tab-content block animate-pm-fade-in">
             <div
               class="relative w-full aspect-video rounded-sm overflow-hidden shadow-xl border border-border-soft bg-bg-secondary mb-6">
-              <video class="w-full h-full object-cover" controls
-                poster="https://placehold.co/1280x720/1e293b/ffffff?text=Video+Mapas+Interactivos">
-                <source src="" type="video/mp4">
-                Tu navegador no soporta el tag de video.
-              </video>
+              <div id="vimeo-title-overlay" class="absolute inset-0 bg-black z-10 flex flex-col items-center justify-center cursor-pointer transition-opacity duration-300 group">
+                <h2 class="text-white text-2xl md:text-4xl font-black uppercase tracking-widest mb-6 transition-transform group-hover:scale-105" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">MAPAS INTERACTIVOS</h2>
+                <div class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+                  <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+              <iframe id="vimeo-player-1" src="https://player.vimeo.com/video/1229377421?title=0&byline=0&portrait=0" class="w-full h-full relative z-0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
             <h4 class="text-2xl font-bold mb-3 text-accent">Control y Planificación 360°</h4>
             <p class="text-text-muted text-lg leading-relaxed">Domina el territorio de tu ISP. Agrupa en un solo lugar
@@ -932,6 +936,35 @@
     </div>
   </footer>
   <script type="module" src="js/main.js"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var iframe = document.getElementById('vimeo-player-1');
+      if (iframe) {
+        var player = new Vimeo.Player(iframe);
+        var overlay = document.getElementById('vimeo-title-overlay');
+        
+        if (overlay) {
+          overlay.addEventListener('click', function() {
+            player.play();
+          });
+        }
+
+        player.on('play', function() {
+          if (overlay) {
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+          }
+        });
+        player.on('pause', function() {
+          if (overlay) {
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
