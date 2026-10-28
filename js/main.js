@@ -29,7 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   const WHATSAPP_NUMBER = "569XXXXXXXX";
   const WHATSAPP_MSG = encodeURIComponent("Hola, quiero pedir mi diagnóstico gratis.");
   const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;
-  ["waNavBtn","waHeroBtn","waFinalBtn"].forEach(id=>{
+  ["waNavBtn","waHeroBtn"].forEach(id=>{
     const el = document.getElementById(id);
     if(el) el.href = waLink;
   });
@@ -268,6 +268,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           content.classList.add('hidden');
           const video = content.querySelector('video');
           if (video) video.pause();
+          const iframe = content.querySelector('iframe');
+          if (iframe && window.Vimeo) {
+            try {
+              const player = new Vimeo.Player(iframe);
+              player.pause();
+            } catch (e) {}
+          }
         });
 
         // Mostrar el contenido objetivo
@@ -324,4 +331,83 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     // Limpiar contenido inicial e iniciar
     framerText.textContent = '';
     typeEffect();
+  }
+
+  // === Formulario de Contacto (Envío a kismannf@gmail.com vía FormSubmit AJAX) ===
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const statusBox = document.getElementById('contactFormStatus');
+      const submitBtn = document.getElementById('btnContactSubmit');
+      const btnText = document.getElementById('btnSubmitText');
+      const btnIcon = document.getElementById('btnSubmitIcon');
+
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      // Estado cargando en el botón
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+      if (btnText) btnText.textContent = 'Enviando solicitud...';
+      if (btnIcon) {
+        btnIcon.classList.add('animate-spin');
+        btnIcon.innerHTML = '<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>';
+      }
+      if (statusBox) statusBox.classList.add('hidden');
+
+      const formData = new FormData(contactForm);
+      const formObject = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/kismannf@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(formObject)
+        });
+
+        const result = await response.json();
+
+        if (response.ok || result.success === 'true' || result.success === true) {
+          contactForm.reset();
+          if (statusBox) {
+            statusBox.className = 'rounded-sm p-4 text-sm bg-emerald-50 border border-emerald-300 text-emerald-900 flex items-start gap-3';
+            statusBox.innerHTML = `
+              <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <strong class="font-bold block text-emerald-950">¡Solicitud enviada con éxito!</strong>
+                <span class="text-emerald-800">Hemos recibido tus datos y te contactaremos en breve para coordinar tu asesoría técnica gratuita.</span>
+              </div>
+            `;
+            statusBox.classList.remove('hidden');
+          }
+        } else {
+          throw new Error(result.message || 'Error al enviar la solicitud.');
+        }
+      } catch (err) {
+        if (statusBox) {
+          statusBox.className = 'rounded-sm p-4 text-sm bg-amber-50 border border-amber-300 text-amber-900';
+          statusBox.innerHTML = `
+            <strong>Hubo un problema al enviar automáticamente el formulario.</strong><br>
+            Por favor, contáctanos directamente a nuestro correo <a href="mailto:kismannf@gmail.com" class="underline font-bold text-brand-blue">kismannf@gmail.com</a>.
+          `;
+          statusBox.classList.remove('hidden');
+        }
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+        if (btnText) btnText.textContent = 'Solicitar Asesoría Gratuita Ahora';
+        if (btnIcon) {
+          btnIcon.classList.remove('animate-spin');
+          btnIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>';
+        }
+      }
+    });
   }
